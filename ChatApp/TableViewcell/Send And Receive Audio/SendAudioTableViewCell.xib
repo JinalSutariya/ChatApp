@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sendAudio" rowHeight="82" id="KGk-i7-Jjw" customClass="SendAudioTableViewCell" customModule="ChatApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-V1-3bJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOl-jv-WUj">
+                                <rect key="frame" x="104.66666666666667" y="10" width="195.33333333333331" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d1b-9c-AlH">
+                                        <rect key="frame" x="5" y="8" width="180.33333333333334" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmv-wL-JzZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="AiJ-Et-Qam"/>
+                                                    <constraint firstAttribute="height" constant="34" id="Na4-0X-0nF"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                            </button>
+                                            <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" progress="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-N4-cN3">
+                                                <rect key="frame" x="38.999999999999986" y="15" width="141.33333333333331" height="4"/>
+                                            </progressView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86733986829999998" green="0.86777622070000004" blue="0.89450559259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="d1b-9c-AlH" firstAttribute="centerY" secondItem="VOl-jv-WUj" secondAttribute="centerY" id="1ya-zR-KCJ"/>
+                                    <constraint firstItem="d1b-9c-AlH" firstAttribute="leading" secondItem="VOl-jv-WUj" secondAttribute="leading" constant="5" id="Tqw-oy-7Uw"/>
+                                    <constraint firstAttribute="trailing" secondItem="d1b-9c-AlH" secondAttribute="trailing" constant="10" id="ixx-US-y5e"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkB-wI-JYI">
+                                <rect key="frame" x="262.66666666666669" y="63" width="37.333333333333314" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dkB-wI-JYI" secondAttribute="trailing" constant="20" id="Lpy-hR-926"/>
+                            <constraint firstItem="dkB-wI-JYI" firstAttribute="top" secondItem="VOl-jv-WUj" secondAttribute="bottom" constant="3" id="P47-GP-MTE"/>
+                            <constraint firstAttribute="bottom" secondItem="dkB-wI-JYI" secondAttribute="bottom" constant="8" id="UAz-b8-mCr"/>
+                            <constraint firstItem="VOl-jv-WUj" firstAttribute="height" secondItem="AiT-V1-3bJ" secondAttribute="height" multiplier="0.609756" id="aGk-7p-sU2"/>
+                            <constraint firstItem="VOl-jv-WUj" firstAttribute="width" secondItem="AiT-V1-3bJ" secondAttribute="width" multiplier="0.610687" id="kcK-cY-gsX"/>
+                            <constraint firstItem="VOl-jv-WUj" firstAttribute="top" secondItem="AiT-V1-3bJ" secondAttribute="top" constant="10" id="pNf-6l-AfB"/>
+                            <constraint firstAttribute="trailing" secondItem="VOl-jv-WUj" secondAttribute="trailing" constant="20" id="umx-0h-Fu8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AiT-V1-3bJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CgT-5U-PIS"/>
+                    <constraint firstAttribute="trailing" secondItem="AiT-V1-3bJ" secondAttribute="trailing" id="Sej-4a-QSz"/>
+                    <constraint firstAttribute="bottom" secondItem="AiT-V1-3bJ" secondAttribute="bottom" id="jdP-jS-SOU"/>
+                    <constraint firstItem="AiT-V1-3bJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sdE-Tl-Ue9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="VOl-jv-WUj" id="UAW-f0-dsq"/>
+                <outlet property="playBtn" destination="kmv-wL-JzZ" id="L27-rX-hhj"/>
+                <outlet property="progressView" destination="hfd-N4-cN3" id="SS8-SP-N2z"/>
+                <outlet property="timeLbl" destination="dkB-wI-JYI" id="rG6-Po-1mY"/>
+            </connections>
+            <point key="canvasLocation" x="10.687022900763358" y="2.1126760563380285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+    </resources>
+</document>
