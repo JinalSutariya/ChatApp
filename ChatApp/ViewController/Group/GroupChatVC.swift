@@ -9,8 +9,12 @@ import UIKit
 import PusherSwift
 import AVFoundation
 
-class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate {
+class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate, AVAudioRecorderDelegate {
     
+    @IBOutlet weak var sentBtn: UIButton!
+    @IBOutlet weak var recordingBtn: UIButton!
+    @IBOutlet weak var musicBtn: UIButton!
+    @IBOutlet weak var mediabtn: UIButton!
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var messageTxt: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -54,8 +58,9 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         tableView.register(UINib(nibName: "SendAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "sendAudio")
         tableView.register(UINib(nibName: "ReceiveAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "receiveAudio")
         
+        setupAudioSession()
         
-        //   statusLbl.text = status
+        sentBtn.isHidden = true
         userNameLbl.text = groupName
         tableView.delegate = self
         tableView.dataSource = self
@@ -63,10 +68,14 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         setPusher()
         getChat()
     }
-    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     @IBAction func groupDetailTap(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "groupDetail") as? GroupDetailVC
         vc?.groupID = groupID
+        vc?.groupNameText = groupName
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     @IBAction func sendAudiioTap(_ sender: Any) {
@@ -75,15 +84,36 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         picker.modalPresentationStyle = .formSheet
         present(picker, animated: true, completion: nil)
     }
+    @IBAction func recordingTap(_ sender: Any) {
+        if audioRecorder == nil {
+            startRecording()
+        } else {
+            stopRecording(success: true)
+        }
+    }
     
     @IBAction func backTap(_ sender: Any){
         performSegueToReturnBack()
         
     }
     @IBAction func sentBtn(_ sender: Any){
+        guard let messageText = messageTxt.text, !messageText.isEmpty else {
+            // Optionally, handle the case where there's no text to send
+            return
+        }
+        
+        self.messageTxt.resignFirstResponder()
+        
         groupSendMessage(message: messageTxt.text!, groupId: groupID)
         
+        self.messageTxt.text = ""
+        recordingBtn.isHidden = false
+        mediabtn.isHidden = false
+        musicBtn.isHidden = false
+        sentBtn.isHidden = true
+        adjustTextFieldBottomConstraint(with: 0)
     }
+    
     @IBAction func addMedia(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -112,7 +142,93 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
     @objc func keyboardWillHide(notification: NSNotification) {
         adjustTextFieldBottomConstraint(with: 0)
     }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+        guard let currentText = textField.text as NSString? else { return true }
+        let newText = currentText.replacingCharacters(in: range, with: string)
+        
+        // Show or hide buttons based on the new text
+        if newText.isEmpty {
+            mediabtn.isHidden = false
+            musicBtn.isHidden = false
+            sentBtn.isHidden = true
+            recordingBtn.isHidden = false
+        } else {
+            mediabtn.isHidden = true
+            musicBtn.isHidden = true
+            sentBtn.isHidden = false
+            recordingBtn.isHidden = true
+        }
+        
+        print(newText)
+        return true
+    }
+    func setupAudioSession() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker])
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to setup audio session: \(error.localizedDescription)")
+        }
+    }
     
+    func startRecording() {
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        self.audioFilename = audioFilename
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder?.delegate = self
+            audioRecorder?.record()
+        } catch {
+            stopRecording(success: false)
+        }
+    }
+    
+    func stopRecording(success: Bool) {
+        audioRecorder?.stop()
+        audioRecorder = nil
+        
+        guard let audioFilename = audioFilename else {
+            print("Audio filename is nil.")
+            return
+        }
+        
+        if success {
+            print("Recording succeeded: \(audioFilename)")
+            sendAudio(fileURL: audioFilename, receiverID: groupID)
+        } else {
+            print("Recording failed.")
+        }
+    }
+    
+    func playAudio() {
+        guard let fileURL = audioFilename, FileManager.default.fileExists(atPath: fileURL.path) else {
+            print("Audio file not found at path: \(String(describing: audioFilename?.path))")
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+            audioPlayer?.delegate = self
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch {
+            print("Failed to play audio: \(error.localizedDescription)")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
     func setPusher() {
         guard let userId = UserDefaults.standard.string(forKey: "userId") else {
             print("User ID not found in UserDefaults.")
@@ -124,11 +240,11 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         pusher = Pusher(key: "269da4d263fa1b3bf7f9", options: options)
         pusher.delegate = self
         
-        let channelName = "cubezytech\(userId)"
+        let channelName = "cubezytechgroup\(groupID)"
         print("Subscribing to channel: \(channelName)")
         let channel = pusher.subscribe(channelName)
         
-        _ = channel.bind(eventName: "cubezytechgroup", eventCallback: { [weak self] (event: PusherEvent) in
+        _ = channel.bind(eventName: "send-message", eventCallback: { [weak self] (event: PusherEvent) in
             guard let self = self else { return }
             if let data = event.data {
                 print("Raw Event Data: \(data)")
@@ -137,13 +253,20 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
                         let newMessages = try JSONDecoder().decode([GroupMessage].self, from: jsonData)
                         DispatchQueue.main.async {
                             for message in newMessages {
-                                print("New Message Received: \(message)")
-                                let newMessage = GroupMessage(groupID: message.groupID, senderID: message.senderID, message: message.message, type: message.type, updatedAt: message.updatedAt, createdAt: message.createdAt, id: message.id)
-                                self.groupMessages.append(newMessage)
-                                self.tableView.reloadData()
-                                self.scrollToBottom()
+                                if message.senderID != Int(userId){
+                                    
+                                    print("New Message Received: \(message)")
+                                    
+                                    let newMessage = GroupMessage(groupID: message.groupID, senderID: message.senderID, message: message.message, type: message.type, updatedAt: message.updatedAt, createdAt: message.createdAt, id: message.id)
+                                    
+                                    
+                                    self.groupMessages.append(newMessage)
+                                    self.tableView.reloadData()
+                                    self.scrollToBottom()
+                                }
                             }
                         }
+                        
                     } catch {
                         print("Failed to decode message data: \(error.localizedDescription)")
                         if let jsonString = String(data: jsonData, encoding: .utf8) {
@@ -160,7 +283,7 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         guard !isLoading else { return }
         
         isLoading = true
-        GetAuthService.shared.groupGetChat(page: currentPage, chatID: groupID                                                                                                                                                                                                                                     ) { (result: Result<GetGroupMessagesResponse, Error>) in
+        GetAuthService.shared.groupGetChat(page: currentPage, chatID: groupID) { (result: Result<GetGroupMessagesResponse, Error>) in
             switch result {
             case .success(let groupMessagesResponse):
                 print("Chat messages fetched successfully")
@@ -186,6 +309,7 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
                     self.tableView.insertRows(at: indexPaths, with: .bottom)
                     
                     if self.currentPage == 2 {
+                        self.tableView.reloadData()
                         self.scrollToBottom()
                     }
                     
@@ -322,13 +446,11 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         }.resume()
     }
     
-    
-    
     func sendAudio(fileURL: URL, receiverID: Int) {
         let parameters = [
             [
-                "key": "receiveruser_id",
-                "value": receiverID,
+                "key": "group_id",
+                "value": "\(receiverID)",
                 "type": "text"
             ],
             [
@@ -372,7 +494,7 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         }
         body += Data("--\(boundary)--\r\n".utf8)
         
-        var request = URLRequest(url: URL(string: "https://fullchatapp.brijeshnavadiya.com/api/send/message")!, timeoutInterval: Double.infinity)
+        var request = URLRequest(url: URL(string: "https://fullchatapp.brijeshnavadiya.com/api/send/group/message")!, timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         if let token = UserDefaults.standard.string(forKey: "token") {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -407,7 +529,6 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         }.resume()
     }
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
@@ -422,8 +543,7 @@ class GroupChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDele
         guard groupMessages.count > 0 else { return }
         let indexPath = IndexPath(row: groupMessages.count - 1, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-    }
-}
+    }}
 
 extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -446,6 +566,7 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                         }
                     }
                     cell.backView.layer.cornerRadius = 8
+                    cell.selectionStyle = .none
                     cell.timeLbl.text = formatTimestamp(message.createdAt)
                     
                 }
@@ -459,7 +580,10 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                             print("SendImageURL",imageURL)
                         }
                     }
+                    cell.userName.text = groupName
                     cell.backView.layer.cornerRadius = 8
+                    cell.selectionStyle = .none
+                    
                     cell.timeLbl.text = formatTimestamp(message.createdAt)
                     
                 }
@@ -467,7 +591,7 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
             }
         }
         else if message.type == "audio" {
-            if message.senderID == groupID {
+            if message.senderID == Int(userId ?? "") {
                 // Configure ReceiveAudioTableViewCell
                 let cell = tableView.dequeueReusableCell(withIdentifier: "sendAudio", for: indexPath) as! SendAudioTableViewCell
                 if let audioURL = URL(string: "https://fullchatapp.brijeshnavadiya.com/public/assets/audio/\(message.message)") {
@@ -477,6 +601,8 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
                 
                 cell.backView.layer.cornerRadius = 10
+                cell.selectionStyle = .none
+                
                 cell.progressView.setProgress(0, animated: false) // Reset progress view
                 return cell
             } else {
@@ -487,8 +613,10 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                     cell.playBtn.tag = indexPath.row
                 }
                 cell.timelbl.text = formatTimestamp(message.createdAt)
-                
+                cell.userName.text = groupName
                 cell.backView.layer.cornerRadius = 10
+                cell.selectionStyle = .none
+                
                 cell.progressView.setProgress(0, animated: false) // Reset progress view
                 return cell
             }
@@ -498,15 +626,18 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                 let cell = tableView.dequeueReusableCell(withIdentifier: "SenderCell", for: indexPath) as! SendMessageTableViewCell
                 cell.msgLbl.text = message.message
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
+                cell.selectionStyle = .none
                 cell.backView.roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 8)
                 
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiverCell", for: indexPath) as! ReceiveMessageTableViewCell
                 cell.msgLbl.text = message.message
-                cell.userName.text = name
+                cell.userName.text = groupName
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
                 cell.backView.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 8)
+                cell.selectionStyle = .none
+                
                 return cell
             }
         }
@@ -515,7 +646,11 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
     
     @objc func playAudio(_ sender: UIButton) {
         let message = groupMessages[sender.tag]
-        AudioManager.shared.playAudio(sender, with: message.message)
+        if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? SendAudioTableViewCell {
+            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+        } else if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? ReceiveAudioTableViewCell {
+            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -540,8 +675,5 @@ extension GroupChatVC: UIDocumentPickerDelegate {
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         print("Document picker was cancelled.")
     }
-    
-    
-    
 }
 

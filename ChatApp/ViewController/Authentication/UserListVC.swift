@@ -15,8 +15,8 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  
 
         override func viewDidLoad() {
             super.viewDidLoad()
-      
-            print(currentId)
+            currentId = UserDefaults.standard.integer(forKey: "userId")
+
             tableView.delegate = self
             tableView.dataSource = self
             setOnlineStatus()
@@ -38,7 +38,7 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  
     
     
     func fetchUsers() {
-                GetAuthService.shared.getUserProfile { result in
+        GetAuthService.shared.getUserProfile { result in
             switch result {
             case .success(let userResponse):
                 if let currentId = self.currentId {
@@ -75,4 +75,48 @@ class UserListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  
         self.navigationController?.pushViewController(chatVC, animated: true)
     }
   
+}
+class WavedProgressView: UIProgressView {
+
+    var lineMargin:CGFloat = 2.0
+    var volumes:[CGFloat] = [0.5,0.3,0.2,0.6,0.4,0.5,0.8,0.6,0.4]
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.darkGray
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.darkGray
+    }
+
+    override var frame: CGRect {
+        didSet{
+            self.drawVerticalLines()
+        }
+    }
+
+    var lineWidth:CGFloat = 3.0{
+        didSet{
+            self.drawVerticalLines()
+        }
+    }
+
+    func drawVerticalLines() {
+        let linePath = CGMutablePath()
+        for i in 0..<self.volumes.count {
+            let height = self.frame.height * volumes[i]
+            let y = (self.frame.height - height) / 2.0
+            linePath.addRect(CGRect(x: lineMargin + (lineMargin + lineWidth) * CGFloat(i), y: y, width: lineWidth, height: height))
+        }
+
+        let lineLayer = CAShapeLayer()
+        lineLayer.path = linePath
+        lineLayer.lineWidth = 0.5
+        lineLayer.strokeColor = UIColor.white.cgColor
+        lineLayer.fillColor = UIColor.white.cgColor
+        self.layer.sublayers?.removeAll()
+        self.layer.addSublayer(lineLayer)
+    }
 }

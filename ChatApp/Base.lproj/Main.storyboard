@@ -22,16 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="egv-Rh-e2p">
-                                <rect key="frame" x="20" y="233.66666666666666" width="353" height="384.66666666666674"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="egv-Rh-e2p">
+                                <rect key="frame" x="20" y="246" width="353" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0bu-qq-WYc">
-                                        <rect key="frame" x="131.66666666666666" y="1" width="89.666666666666657" height="93"/>
+                                        <rect key="frame" x="131.66666666666666" y="1" width="89.666666666666657" height="90"/>
                                         <color key="tintColor" systemColor="systemBlueColor"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-ZG-PKQ">
-                                        <rect key="frame" x="18" y="134.33333333333334" width="317" height="153.00000000000003"/>
+                                        <rect key="frame" x="18" y="121.33333333333331" width="317" height="153"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-tx-Leu">
                                                 <rect key="frame" x="0.0" y="0.0" width="317" height="35"/>
@@ -60,7 +60,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KET-CL-383">
-                                        <rect key="frame" x="111.33333333333333" y="327.33333333333337" width="130.33333333333337" height="57.333333333333314"/>
+                                        <rect key="frame" x="111.33333333333333" y="304.33333333333337" width="130.33333333333337" height="55.666666666666686"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -251,7 +251,7 @@
                             <constraint firstItem="ixE-aK-eiy" firstAttribute="bottom" secondItem="nwQ-AU-Ihx" secondAttribute="bottom" id="xzc-0D-MbK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat" image="ellipsis.message.fill" catalog="system" selectedImage="ellipsis.message" id="IYR-Z1-3BB"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="message.fill" catalog="system" selectedImage="message" id="IYR-Z1-3BB"/>
                     <connections>
                         <outlet property="tableView" destination="ixE-aK-eiy" id="4kn-ce-Bf4"/>
                     </connections>
@@ -395,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="3261.8320610687019" y="-27.464788732394368"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View View Controller-->
         <scene sceneID="dyq-gz-sV6">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" id="u9H-8A-23z" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="u9H-8A-23z" customClass="TabViewViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uta-8E-76f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -479,12 +479,12 @@
                                 <rect key="frame" x="20" y="773.66666666666663" width="373" height="34.333333333333371"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffw-ir-5O0">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179.33333333333334" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7WJ-fJ-M3a">
-                                        <rect key="frame" x="233" y="0.0" width="140" height="34.333333333333336"/>
+                                        <rect key="frame" x="187.33333333333337" y="0.0" width="185.66666666666663" height="34.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iZ-Xo-S6K">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="34.333333333333336"/>
@@ -502,8 +502,16 @@
                                                     <action selector="musicTap:" destination="rdn-96-wLA" eventType="touchUpInside" id="btm-VM-a5n"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P79-sH-7gc">
+                                                <rect key="frame" x="89.333333333333343" y="0.0" width="45.666666666666657" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="recordingTap:" destination="rdn-96-wLA" eventType="touchUpInside" id="AJE-1n-ts6"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnG-b9-E9x">
-                                                <rect key="frame" x="89.333333333333314" y="0.0" width="50.666666666666657" height="34.333333333333336"/>
+                                                <rect key="frame" x="134.99999999999997" y="0.0" width="50.666666666666657" height="34.333333333333336"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system" title=""/>
@@ -534,8 +542,11 @@
                     </view>
                     <connections>
                         <outlet property="addMediaBtn" destination="0iZ-Xo-S6K" id="vGV-Ki-QXA"/>
+                        <outlet property="audioBtn" destination="7hN-w8-QS5" id="K1F-WZ-MUN"/>
                         <outlet property="messageTextFieldBottomConstraint" destination="JhU-wb-yXk" id="BVZ-ia-ai2"/>
                         <outlet property="messageTxt" destination="Ffw-ir-5O0" id="KQh-1Z-6iG"/>
+                        <outlet property="recorderBtn" destination="P79-sH-7gc" id="7NY-FM-85E"/>
+                        <outlet property="sentBtn" destination="nnG-b9-E9x" id="Wic-Fp-Wp6"/>
                         <outlet property="statusLbl" destination="iJb-LA-REi" id="Qro-Uk-1nH"/>
                         <outlet property="tableView" destination="F1P-e7-e7N" id="pkh-ll-ZhF"/>
                         <outlet property="userNameLbl" destination="DBI-yU-6Ew" id="Otk-ht-ldc"/>
@@ -570,30 +581,40 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-Rl-xQm">
-                                <rect key="frame" x="0.0" y="299" width="393" height="519"/>
+                                <rect key="frame" x="0.0" y="314" width="393" height="504"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="597-0f-z8d">
+                                <rect key="frame" x="0.0" y="270" width="393" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nHc-Zl-BeU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="597-0f-z8d" firstAttribute="leading" secondItem="nHc-Zl-BeU" secondAttribute="leading" id="3vW-If-e9Q"/>
+                            <constraint firstItem="NL0-Rl-xQm" firstAttribute="top" secondItem="597-0f-z8d" secondAttribute="bottom" constant="20" id="7Ez-VB-3gg"/>
                             <constraint firstItem="mDt-mo-ORM" firstAttribute="top" secondItem="nHc-Zl-BeU" secondAttribute="top" constant="70" id="Fjv-lW-k4n"/>
+                            <constraint firstItem="597-0f-z8d" firstAttribute="top" secondItem="mDt-mo-ORM" secondAttribute="bottom" constant="11" id="Tmw-ES-X5j"/>
                             <constraint firstItem="2F0-4q-hmg" firstAttribute="top" secondItem="nHc-Zl-BeU" secondAttribute="top" id="XS2-OF-2P9"/>
                             <constraint firstItem="mDt-mo-ORM" firstAttribute="centerX" secondItem="jL8-a4-qRH" secondAttribute="centerX" id="XbN-hv-aK8"/>
                             <constraint firstItem="NL0-Rl-xQm" firstAttribute="leading" secondItem="nHc-Zl-BeU" secondAttribute="leading" id="Xua-in-lIQ"/>
                             <constraint firstItem="nHc-Zl-BeU" firstAttribute="trailing" secondItem="NL0-Rl-xQm" secondAttribute="trailing" id="aZY-po-NLI"/>
                             <constraint firstItem="nHc-Zl-BeU" firstAttribute="bottom" secondItem="NL0-Rl-xQm" secondAttribute="bottom" id="cGE-ov-cbM"/>
+                            <constraint firstItem="nHc-Zl-BeU" firstAttribute="trailing" secondItem="597-0f-z8d" secondAttribute="trailing" id="cnw-7f-9ma"/>
                             <constraint firstItem="2F0-4q-hmg" firstAttribute="leading" secondItem="nHc-Zl-BeU" secondAttribute="leading" constant="20" id="q0M-33-kJy"/>
-                            <constraint firstItem="NL0-Rl-xQm" firstAttribute="top" secondItem="mDt-mo-ORM" secondAttribute="bottom" constant="40" id="vT0-fc-TTx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="groupName" destination="597-0f-z8d" id="YQU-HX-uuQ"/>
                         <outlet property="tableView" destination="NL0-Rl-xQm" id="Oq8-Eu-mbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6w-D2-z4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5293.8931297709923" y="-42.253521126760567"/>
+            <point key="canvasLocation" x="5898" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bIj-gM-M26">
@@ -830,12 +851,12 @@
                                 <rect key="frame" x="20" y="773.66666666666663" width="373" height="34.333333333333371"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCW-ap-yhV">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179.33333333333334" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFt-75-nTg">
-                                        <rect key="frame" x="233" y="0.0" width="140" height="34.333333333333336"/>
+                                        <rect key="frame" x="187.33333333333337" y="0.0" width="185.66666666666663" height="34.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-hn-mxh">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="34.333333333333336"/>
@@ -853,8 +874,16 @@
                                                     <action selector="sendAudiioTap:" destination="LUx-c5-jD0" eventType="touchUpInside" id="dIt-ix-YUQ"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-Gv-rvJ">
+                                                <rect key="frame" x="89.333333333333343" y="0.0" width="45.666666666666657" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="recordingTap:" destination="LUx-c5-jD0" eventType="touchUpInside" id="epe-Vt-ABd"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-Md-N5y">
-                                                <rect key="frame" x="89.333333333333314" y="0.0" width="50.666666666666657" height="34.333333333333336"/>
+                                                <rect key="frame" x="134.99999999999997" y="0.0" width="50.666666666666657" height="34.333333333333336"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system" title=""/>
@@ -884,22 +913,27 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mediabtn" destination="bgS-hn-mxh" id="hwt-3U-emI"/>
                         <outlet property="messageTextFieldBottomConstraint" destination="D5p-1I-fDv" id="mer-Zd-xNL"/>
                         <outlet property="messageTxt" destination="UCW-ap-yhV" id="e8v-PR-epr"/>
+                        <outlet property="musicBtn" destination="smQ-tO-kJR" id="b6E-Fw-vpr"/>
+                        <outlet property="recordingBtn" destination="wGA-Gv-rvJ" id="xFo-93-ycb"/>
+                        <outlet property="sentBtn" destination="ks7-Md-N5y" id="Vgw-ds-pyh"/>
                         <outlet property="tableView" destination="CGi-cw-Qgg" id="g93-QJ-wRU"/>
                         <outlet property="userNameLbl" destination="55M-vV-1Is" id="jRh-kB-Jg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGX-23-kdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5930.5343511450383" y="-55.633802816901408"/>
+            <point key="canvasLocation" x="5277" y="-42"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <image name="ellipsis.message" catalog="system" width="128" height="116"/>
-        <image name="ellipsis.message.fill" catalog="system" width="128" height="114"/>
+        <image name="message" catalog="system" width="128" height="116"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="person.3" catalog="system" width="128" height="66"/>

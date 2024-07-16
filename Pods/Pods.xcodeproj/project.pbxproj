@@ -7,213 +7,292 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B24BF7047419F1987352C3536BEC5E3 /* AuthMethod+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92E59AC8036E4289FD10370D16DDD1 /* AuthMethod+ObjectiveC.swift */; };
-		18221A0CDDED4EFDE45036AF318E27E4 /* ChannelEventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437F5C5C5CCA939B81BB07B83E32D2C /* ChannelEventFactory.swift */; };
-		21446593318FBAE4872D80164707F9D3 /* PusherPresenceChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811FE485A577EC0B242EFB7A86F4094E /* PusherPresenceChannel.swift */; };
-		287D9BAC4EB0602C1427AB6DF121440C /* AuthMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D9082243FE3E7FF8B35E4874536B38 /* AuthMethod.swift */; };
-		297A33A6ADE0212C537EA08CB3C8A701 /* PusherPresenceChannelMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4395E1909DA2746CF4CA025C300906 /* PusherPresenceChannelMember.swift */; };
-		2EA8488A43C9DB0D67370D5895BBA98D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2F07D135498C989350AD22D04C69B516 /* Pods-ChatApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C1B6ADE843AA46135CE2255028F887 /* Pods-ChatApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31DDF9E395F348761AFA0D93C5CF73AF /* PusherSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719EF5B96F42BA751125EC58D7ADCF1D /* PusherSwift.swift */; };
-		356CCDE8EC0F9CBA072CD2CDCA308142 /* PusherClientOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752159FBC40D75C3CD6218228261C0F7 /* PusherClientOptions.swift */; };
-		3DE1110D6FA8C810041AC3E46CB38F55 /* TweetNacl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D4A4D5564C62E8BB1416FA8E04D97 /* TweetNacl.swift */; };
-		45001A953F8FCA71F7655CFDBA165E33 /* URL+Pusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25304BD8835E33163442105261DB5F77 /* URL+Pusher.swift */; };
-		47CCA656F3E18DB5864AA4B5DC448997 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CF9069578053D15B2D3CBE0AF061C3 /* Logger.swift */; };
-		4E08C88779DA1F45492FD152F345E1DC /* PusherHost+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C3B848D73DDB284DBFA413E1B3F980 /* PusherHost+ObjectiveC.swift */; };
-		51C9E5BE1F9009C5E4481E5F1974A875 /* Pusher+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54512A7B6634FFE5820D56A41288F5 /* Pusher+ObjectiveC.swift */; };
-		51E05BD6F47ADA1E93EE4DD38D03E3FA /* PusherClientOptions+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2733FEA7AD04950BEFB1C010C14CEF6 /* PusherClientOptions+ObjectiveC.swift */; };
-		55B568B7417A23CCEBB40EC2A1F8F242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		57F5D9793A38125288C8D8686B444EF7 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B935202D059558CB9F2B9D7FAB06D163 /* Crypto.swift */; };
-		5D2EB7E7C222DC52373EABE61746F397 /* PusherChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EA80EE0F1B5ACCF030E94FE39D688 /* PusherChannel.swift */; };
-		5EE84EAFA0AEF1AC38F6D2DF41292258 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA775F724FF61BB516F75E77EE43CBE8 /* AuthError.swift */; };
-		609C5C9AFF6F94996E5AC5803A53E0F2 /* AuthRequestBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8EFB07585EC1B5438F9412314E3A6C /* AuthRequestBuilderProtocol.swift */; };
-		60FB3CC98C8D8A82FDA3EC3778E27CC2 /* ctweetnacl.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AA54D493197D8BFB8F1DE6C698EEB70 /* ctweetnacl.c */; };
-		65B2038A0FD1E7521F886BD111E13F29 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F518FBA3940BFFB510D446DF959A27A /* ConnectionState.swift */; };
-		681DBEBB148B0A1BC07BC357CCF8F83E /* PusherConnection+WebsocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2410241D05A2DC9916A309CA4D369 /* PusherConnection+WebsocketDelegate.swift */; };
-		6B23B3398C3A824E7A6119579F07A4B2 /* QueuedClientEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535C93CABFBA750D6916D7AFA6116071 /* QueuedClientEvent.swift */; };
-		6D9D725FE3E3C47D033F8CB772982158 /* PusherSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E849AF10428E54857225B4C33F4ADC1B /* PusherSwift-dummy.m */; };
-		72D7EF7CCF7D3E6F0C27023991F8A077 /* NWWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270BD683AB6AD88612CD586539B7C033 /* NWWebSocket.swift */; };
-		7695BF2327E2EDC1DAA6DCC79118D516 /* Pods-ChatApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF011A981761287B3276BCBA6985C2BB /* Pods-ChatApp-dummy.m */; };
-		790E0C6EC605972D78B852C50AD74082 /* PusherChannel+EncryptionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67014C9D7CFAB7E97102F881C7EA4317 /* PusherChannel+EncryptionHelpers.swift */; };
-		7D8D25988764573E5CE52FC275BB29CC /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F023133BBB086D7FAFDBFB022F068C /* Authorizer.swift */; };
-		7E0CB50B15DD9DA6EB69829834C93616 /* EventParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF8005E6CBA469368197555CD016F0 /* EventParser.swift */; };
-		7EB975B847D99D201AD15F0B98F4BE80 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1343A5E1DEA4DCE6FEED9BFBCB2A02 /* EventHandler.swift */; };
-		8238957B87DCB4170879529C9E643483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8A4A7191E50DFA7B3B08DB0272EBD2D2 /* ChannelEventQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0287E8750786875C37E7288378C55 /* ChannelEventQueue.swift */; };
-		8B8B61FB2328B5488AC6958BD5A0A81B /* EventQueueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368888066EF4A270B54170648B8C74E /* EventQueueDelegate.swift */; };
-		8EA74C9DDBDEAA8428029652BAC4C40D /* PusherChannelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2C5E154E267976A1F63A499D69082 /* PusherChannelType.swift */; };
-		9A2565CE057EE77619A9389EEAF04041 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC77DBA72BF00848BAA4C5B88C22409 /* Constants.swift */; };
-		9DD30B8BD6D61B4592844067C36CBE3F /* PusherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA334E3D2645BB36B5F49E6C479E144 /* PusherError.swift */; };
-		A7830473472B2037C01BF4DE681D856B /* NWWebSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 167450499822F1F56FBB7585675D1848 /* NWWebSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A863DB025DBD416F8B0C48C24BFE53CF /* PusherHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80D1350F1F920AD839DE09EC73642F /* PusherHost.swift */; };
-		ADA47DD20C10A58630EB8F099964A6D1 /* PusherGlobalChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E29296BB1B975554C550AEF8A59EC37 /* PusherGlobalChannel.swift */; };
-		AE18C3B8BC595BB21D556177998EC1E5 /* TweetNacl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A3D91B7CA49D7A505FDE60DDBDAF0F /* TweetNacl-dummy.m */; };
-		B1BA679D64F12CF39008A1C5B3438F41 /* PusherError+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3871C71073E4CB9B2C424C8D37BC1751 /* PusherError+ObjectiveC.swift */; };
-		B593DE4C2482BF88B2DE291B1EF91DB7 /* NWWebSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 409EAA84594A5366E8B46B91462F584B /* NWWebSocket-dummy.m */; };
-		BF1373BB5B74109D2A062EEEAB564F38 /* PusherConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13445077D5E9401E489666583922AC5 /* PusherConnection.swift */; };
-		C173FDCD6CA5545F7FDE84BDE3674B96 /* EventError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6A97C3BFBE30B55D95EAFE26121E4 /* EventError.swift */; };
-		C1AAABF138862BC68B02DD2FDF7588F8 /* ctweetnacl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3059BE1E3FD98ACFDB08B34D06C2E14E /* ctweetnacl.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C31BC3D0F9D91420A2173CEEA1AB7856 /* EventQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733AB27C877A42F89C2F6A376367A570 /* EventQueue.swift */; };
-		C3938AE7CEA983F566BD46032C8E4ED9 /* PusherAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF58DCAD65D45AC41C6673CE3DBC19 /* PusherAuth.swift */; };
-		C4559AD0C77ABFE2EB0460F544D8F201 /* WebSocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DBB88D317A166D1E665AEC1BFADF9E /* WebSocketConnection.swift */; };
-		C8C4488758DEE4893AFC5243C1E133BE /* PusherSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 019283B5D257D9CB272048864C019BB4 /* PusherSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD7399A55D21CBA1899DA3E4BBEC6CBB /* OCPusherHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37202C4A25DD90D5E0ADC808C313F2 /* OCPusherHost.swift */; };
-		CEF9946EC9F70BB506ECCC9CDE05C7AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D0D8D97CCB7BC8E315D11B5AAE960AB0 /* PusherChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AE5578BE2F805C9BCE45BCCAB9D6B9 /* PusherChannels.swift */; };
-		D2902E2E286B3393B56E1835F8E4312A /* NWConnection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0206187EDB94C6B9230AFDF5B64BD6C /* NWConnection+Extension.swift */; };
-		D6D200BCAEF24B3F7CD80C2B8E43BBE0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B776635E3739143C45C913C93AB5A5E /* Constant.swift */; };
-		D7D3EBD96DEF1CE78F8CA451CEB556A8 /* ChannelsProtocolCloseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A294C5C8DAD2BB84B31CDE86F09A690 /* ChannelsProtocolCloseCode.swift */; };
-		DD47F1FE6BBC1D8CD2D9D17492352DD5 /* PusherEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA101FCEEF41046EAC04C7A3395683E6 /* PusherEvent.swift */; };
-		DE021D8600B4CC70E81DEB0C3200FD4B /* TweetNacl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2749783F5D36B1C046C95BCED1095D /* TweetNacl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E241F1BD4DF2D8C8ED36B5A39B557D23 /* OCAuthMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27AB72B804A4B8CE091022627E75459 /* OCAuthMethod.swift */; };
-		E8DE3DB5D959495A4228389647D48D32 /* PusherConnection+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4F57DC5B85DE2010D1F3BB18F4C26 /* PusherConnection+ObjectiveC.swift */; };
-		ECF508DF2095B4FDE8EF7BBCBC8724B4 /* PusherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D6E66D88BCF12F0E834C1589839F5 /* PusherDelegate.swift */; };
-		F43B253A14D0ED1FACCF259AECFC3B5B /* EventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD348D7CBDF8D2CC826ED931A1DF7A /* EventFactory.swift */; };
-		FCF30C8255B07B8F6FDB4D7E30624D03 /* TweetNacl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2192D8C7FF79477AE9E9181B7106852A /* TweetNacl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B24BF7047419F1987352C3536BEC5E3 /* AuthMethod+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72E3B505C7B62E7CE7614E14297AEF1 /* AuthMethod+ObjectiveC.swift */; };
+		18221A0CDDED4EFDE45036AF318E27E4 /* ChannelEventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871B58B322529CD0FE74584436DBDB13 /* ChannelEventFactory.swift */; };
+		1E3B81F718F36A38528FF6CDE5259B5A /* SCSiriWaveformView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BBA7DEA1899A3A9D932136DCEA2C2E /* SCSiriWaveformView-dummy.m */; };
+		1F0B6C16ECEAE58E6E68B992F07FD9EF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656527B8C55C13E154B5A66AFD43C20A /* Accelerate.framework */; };
+		21446593318FBAE4872D80164707F9D3 /* PusherPresenceChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925E66FED5739DC9C18D3663FA514C0 /* PusherPresenceChannel.swift */; };
+		287D9BAC4EB0602C1427AB6DF121440C /* AuthMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23BD88678C97E74235A00B3EC1CE57A /* AuthMethod.swift */; };
+		297A33A6ADE0212C537EA08CB3C8A701 /* PusherPresenceChannelMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA10E5EDEA21FC08E34F40AEF8A8BA /* PusherPresenceChannelMember.swift */; };
+		2A35B3D564EFF0B8A0338E1BCC143AF3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A1D2BB5059A82D7A171E63A1D0B29C /* AVFoundation.framework */; };
+		2A9239D126171725770ED23137CC036E /* ctweetnacl.c in Sources */ = {isa = PBXBuildFile; fileRef = F961C89DB12FF654507FF1D811852DA9 /* ctweetnacl.c */; };
+		31DDF9E395F348761AFA0D93C5CF73AF /* PusherSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FC2FA452E57CC414CA9741047C2F4 /* PusherSwift.swift */; };
+		356CCDE8EC0F9CBA072CD2CDCA308142 /* PusherClientOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB14A01C22CC416EF2EB0108C5C58ED /* PusherClientOptions.swift */; };
+		3AA0808CE119E6C47BEE61DF504FB3CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
+		3AFA136E1691B4D35ADF447D605DB387 /* ASWaveformPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95581843CB7CBEA7D9F32496236BA6E /* ASWaveformPlayerView.swift */; };
+		3E5EED8F6DD9725A69C947DA96B7BD1C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B4D820DAE38C97CF0CC004F7781C0 /* Constant.swift */; };
+		41917C70975369593C68DBD66F1D5010 /* ASWaveformPlayerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13040EA7F2C4E6EA6EAB0486AC5E2E93 /* ASWaveformPlayerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45001A953F8FCA71F7655CFDBA165E33 /* URL+Pusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF971B7406D1407C7553E97D1C49DD44 /* URL+Pusher.swift */; };
+		46CE365D7F32059AB74D559689889859 /* ctweetnacl.h in Headers */ = {isa = PBXBuildFile; fileRef = B3712DA052D134D4E22CB8809EC55C75 /* ctweetnacl.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		47CCA656F3E18DB5864AA4B5DC448997 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315AFC1F6575CEB3C7915F72A07137B9 /* Logger.swift */; };
+		4E08C88779DA1F45492FD152F345E1DC /* PusherHost+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD31CDD6B4E60497F621666A1DD6E5B7 /* PusherHost+ObjectiveC.swift */; };
+		51C9E5BE1F9009C5E4481E5F1974A875 /* Pusher+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2604CD06D6639B99072E7CC4C82D /* Pusher+ObjectiveC.swift */; };
+		51E05BD6F47ADA1E93EE4DD38D03E3FA /* PusherClientOptions+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC65CF4F78CBBEFA5C058A29F10173 /* PusherClientOptions+ObjectiveC.swift */; };
+		52A6533F4BAE549A473C4F2EF939B393 /* TweetNacl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5989829343892A498C010187A08167B1 /* TweetNacl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55B568B7417A23CCEBB40EC2A1F8F242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
+		57F5D9793A38125288C8D8686B444EF7 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E475BE399081E1E4EAB322A579D17 /* Crypto.swift */; };
+		5D2EB7E7C222DC52373EABE61746F397 /* PusherChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADBA894CC6D5DE8F2AE7352668C6EA9 /* PusherChannel.swift */; };
+		5EE84EAFA0AEF1AC38F6D2DF41292258 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9873D71DF534F078089E50DC75A3C5D1 /* AuthError.swift */; };
+		609C5C9AFF6F94996E5AC5803A53E0F2 /* AuthRequestBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D74B7444573D9061597D43C6B23C802 /* AuthRequestBuilderProtocol.swift */; };
+		65B2038A0FD1E7521F886BD111E13F29 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B833F0D5241941D7C5C15ADD2CF783 /* ConnectionState.swift */; };
+		66902AD8C148794237A5D75E172CE75D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193630ED5D9C8656A7B5384B73DE3135 /* UIKit.framework */; };
+		681DBEBB148B0A1BC07BC357CCF8F83E /* PusherConnection+WebsocketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D1A3E519CCB3541E608C2ED9E94E /* PusherConnection+WebsocketDelegate.swift */; };
+		6B23B3398C3A824E7A6119579F07A4B2 /* QueuedClientEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EA6A7FCD28CEB396B9F4AB1AF6D24 /* QueuedClientEvent.swift */; };
+		6C26F4AA7372F19970C2713F20C925AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
+		6D9D725FE3E3C47D033F8CB772982158 /* PusherSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6453F3D2921F26C0045E1213BB4C8693 /* PusherSwift-dummy.m */; };
+		6F6A71CCC4EE3D15E133EACB102AE1C0 /* AudioAnalyser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4A1A4259855C2F0E165A28470F16 /* AudioAnalyser.swift */; };
+		72D7EF7CCF7D3E6F0C27023991F8A077 /* NWWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251475D2B271D1AE9163D3AEE8929962 /* NWWebSocket.swift */; };
+		790E0C6EC605972D78B852C50AD74082 /* PusherChannel+EncryptionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141CDA8EF4CF2EA3C4D61972F6FCDE1C /* PusherChannel+EncryptionHelpers.swift */; };
+		7D8D25988764573E5CE52FC275BB29CC /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FE23DB4BA77685D69A5B1B7260EE49 /* Authorizer.swift */; };
+		7DBAA940F4855A869B17CDF18E723039 /* ASWaveformPlayerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D526A6B0B7863236DF8A88849A404 /* ASWaveformPlayerView-dummy.m */; };
+		7E0CB50B15DD9DA6EB69829834C93616 /* EventParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C5AEB88A283934D14B105B4D8BB64 /* EventParser.swift */; };
+		7EB975B847D99D201AD15F0B98F4BE80 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BD16D62539164EBAB191C7A93D16E9 /* EventHandler.swift */; };
+		8178FA478C3AE12EC7D9EA34DE2E2163 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0489F23B06048A896A917572BC03E76C /* QuartzCore.framework */; };
+		8A4A7191E50DFA7B3B08DB0272EBD2D2 /* ChannelEventQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBAD6D54EBBF3474114881DB8D0FC9 /* ChannelEventQueue.swift */; };
+		8B8B61FB2328B5488AC6958BD5A0A81B /* EventQueueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E8F23C4C6FA35407FA5979C913D4E /* EventQueueDelegate.swift */; };
+		8EA74C9DDBDEAA8428029652BAC4C40D /* PusherChannelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE78E12879A6CEBE9DC7DD36241BE6 /* PusherChannelType.swift */; };
+		9A2565CE057EE77619A9389EEAF04041 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945ECC7C9C01F243FAA593789207580 /* Constants.swift */; };
+		9BCCB6D1A724B504D9BA846E2F8E9816 /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31640EBE6B390D08E0CD8E2AB80F5986 /* SCSiriWaveformView.m */; };
+		9DD30B8BD6D61B4592844067C36CBE3F /* PusherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEBB7FEB1E7683ED0F8091F5B8A9B7A /* PusherError.swift */; };
+		A4CF57F0D4EC6E1D1E922232B0A14CAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10480169508BEAA7BB9B0DB805EB72C5 /* CoreGraphics.framework */; };
+		A7830473472B2037C01BF4DE681D856B /* NWWebSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C701C06C53D8914F81E02F5CCEB8BB4 /* NWWebSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A863DB025DBD416F8B0C48C24BFE53CF /* PusherHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E35345AAAD48909C1216A92647202B /* PusherHost.swift */; };
+		ADA47DD20C10A58630EB8F099964A6D1 /* PusherGlobalChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D000DEEB042E13D4DBFA169A28BAB58F /* PusherGlobalChannel.swift */; };
+		B1BA679D64F12CF39008A1C5B3438F41 /* PusherError+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1661129A8F99C925A6A211B6F0DD32 /* PusherError+ObjectiveC.swift */; };
+		B593DE4C2482BF88B2DE291B1EF91DB7 /* NWWebSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19189D0193B3414A8F8038658E1C5010 /* NWWebSocket-dummy.m */; };
+		BA791E96C848EC4CBF138F8962F132A8 /* TweetNacl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E2408D56EFE97479FEED7AA7A2E79A /* TweetNacl.swift */; };
+		BF1373BB5B74109D2A062EEEAB564F38 /* PusherConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71FCB16EF5774528A35CD837396E65 /* PusherConnection.swift */; };
+		C173FDCD6CA5545F7FDE84BDE3674B96 /* EventError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA9D90542BD3ADE3BA400A5C8E6AE41 /* EventError.swift */; };
+		C31BC3D0F9D91420A2173CEEA1AB7856 /* EventQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1306D07462BCB6F7961DE72D2CB36 /* EventQueue.swift */; };
+		C3938AE7CEA983F566BD46032C8E4ED9 /* PusherAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0BA7C61AEF60EF1913C30F4EA4DE5 /* PusherAuth.swift */; };
+		C4559AD0C77ABFE2EB0460F544D8F201 /* WebSocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484979FB494EAB7ACD6F36E3CE3B23B9 /* WebSocketConnection.swift */; };
+		C648851BB339BFB0C0C98CE39909F57B /* SCSiriWaveformView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAC2A415E46A78369E9327A5612E92D /* SCSiriWaveformView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C681335BCD26C632401869CA71B8FAF2 /* Pods-ChatApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF011A981761287B3276BCBA6985C2BB /* Pods-ChatApp-dummy.m */; };
+		C8C4488758DEE4893AFC5243C1E133BE /* PusherSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 846D0A8584C56A732EC2F9CDBA4AC6D0 /* PusherSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD7399A55D21CBA1899DA3E4BBEC6CBB /* OCPusherHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A0115CAF4E1AA3A9EBE8AEB8A45FF1 /* OCPusherHost.swift */; };
+		CEF9946EC9F70BB506ECCC9CDE05C7AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
+		D079C5499D23C4B6103FF9D898948649 /* TweetNacl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506796BE196362E20036E0830071538 /* TweetNacl-dummy.m */; };
+		D0D8D97CCB7BC8E315D11B5AAE960AB0 /* PusherChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EB4C95A211FCE0F2837C61DBC472FC /* PusherChannels.swift */; };
+		D21DF8C282A275E797A37A016C56E6D4 /* Pods-ChatApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C1B6ADE843AA46135CE2255028F887 /* Pods-ChatApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2902E2E286B3393B56E1835F8E4312A /* NWConnection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB5B7155B6C193C723E278E18452EF /* NWConnection+Extension.swift */; };
+		D523BD8BEFB1A91901E06255B2213F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
+		D7D3EBD96DEF1CE78F8CA451CEB556A8 /* ChannelsProtocolCloseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DB9818458A81D1818BAAE5C5677A5 /* ChannelsProtocolCloseCode.swift */; };
+		DCA609F9950065E1D1699CD0D995D987 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A1D2BB5059A82D7A171E63A1D0B29C /* AVFoundation.framework */; };
+		DD47F1FE6BBC1D8CD2D9D17492352DD5 /* PusherEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032CB72268872FA627FD831CF0F11AE1 /* PusherEvent.swift */; };
+		DD65C402C9339F45338AFADF6AC96995 /* TweetNacl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F77EC9DDEA45DF47014C4D057B0A7055 /* TweetNacl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E241F1BD4DF2D8C8ED36B5A39B557D23 /* OCAuthMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29495D7C39698154968DC2EB7E5A1AB5 /* OCAuthMethod.swift */; };
+		E8B1EE4E24501DF073BA489FE8CE71CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193630ED5D9C8656A7B5384B73DE3135 /* UIKit.framework */; };
+		E8DE3DB5D959495A4228389647D48D32 /* PusherConnection+ObjectiveC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF9A1E59C30E21A8CDA0EDFBD3845C /* PusherConnection+ObjectiveC.swift */; };
+		ECF508DF2095B4FDE8EF7BBCBC8724B4 /* PusherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45072E7B1E10CDC76D349E027F16EC58 /* PusherDelegate.swift */; };
+		F43B253A14D0ED1FACCF259AECFC3B5B /* EventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F23165C050F5DAA6CA66DFE0AED0C3 /* EventFactory.swift */; };
+		F910F9909EE1A0FB09F965F98BCDE68E /* SCSiriWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = 219151C8A80A293CD6A71064645B8C76 /* SCSiriWaveformView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC3AA786E8E86F5B3089D6AB3254949B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A121126940B3B1ADA9F357EB7F3D17C /* PBXContainerItemProxy */ = {
+		246B6025B2DD53F8A5C2A4C2BD7769C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D76BE29FE832155DDE00968858DCAB38;
+			remoteInfo = SCSiriWaveformView;
+		};
+		54F86C766472F8C7552EB78CC01450E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E058628796F895302820DFBD58DCEDAC;
+			remoteInfo = TweetNacl;
+		};
+		84A4FC12652D929833C88D61B562C192 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8677E8CA51138111F0D17125A79694;
+			remoteInfo = NWWebSocket;
+		};
+		8B5E1232AB64491F3288DD222898E4FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4921D5B9FFDABBEE3823ABC7E8DAA736;
 			remoteInfo = PusherSwift;
 		};
-		3300CD0D2F1076941501B603D795784F /* PBXContainerItemProxy */ = {
+		B1D5CA931233C19C91C8901A692D6435 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E058628796F895302820DFBD58DCEDAC;
 			remoteInfo = TweetNacl;
 		};
-		495DFA4E4EFB568C74A4121D34859421 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E058628796F895302820DFBD58DCEDAC;
-			remoteInfo = TweetNacl;
-		};
-		CC316EA48D19C4A46042AF89E32FC4EF /* PBXContainerItemProxy */ = {
+		B353BEA48C63F7D9276C4281AA990CFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C8677E8CA51138111F0D17125A79694;
 			remoteInfo = NWWebSocket;
 		};
-		DFBE2D3E22A95809E366F9693142FFC4 /* PBXContainerItemProxy */ = {
+		BE373F55F5C1D5E34C1BA997D34CAED0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C8677E8CA51138111F0D17125A79694;
-			remoteInfo = NWWebSocket;
+			remoteGlobalIDString = F6F6C62927F8BF152DD9F95597ED2F89;
+			remoteInfo = ASWaveformPlayerView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		000D4A4D5564C62E8BB1416FA8E04D97 /* TweetNacl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweetNacl.swift; path = Sources/TweetNacl/TweetNacl.swift; sourceTree = "<group>"; };
-		019283B5D257D9CB272048864C019BB4 /* PusherSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PusherSwift-umbrella.h"; sourceTree = "<group>"; };
-		067E32E6ED18F041D44B2D1B42B9D6D7 /* TweetNacl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweetNacl.debug.xcconfig; sourceTree = "<group>"; };
-		08D6A97C3BFBE30B55D95EAFE26121E4 /* EventError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventError.swift; path = Sources/Models/EventError.swift; sourceTree = "<group>"; };
-		0A54512A7B6634FFE5820D56A41288F5 /* Pusher+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Pusher+ObjectiveC.swift"; path = "Sources/ObjC/Pusher+ObjectiveC.swift"; sourceTree = "<group>"; };
-		0AA334E3D2645BB36B5F49E6C479E144 /* PusherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherError.swift; path = Sources/Models/PusherError.swift; sourceTree = "<group>"; };
+		000E475BE399081E1E4EAB322A579D17 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = Sources/Helpers/Crypto.swift; sourceTree = "<group>"; };
+		030B4D820DAE38C97CF0CC004F7781C0 /* Constant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Sources/TweetNacl/Constant.swift; sourceTree = "<group>"; };
+		032CB72268872FA627FD831CF0F11AE1 /* PusherEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherEvent.swift; path = Sources/Models/PusherEvent.swift; sourceTree = "<group>"; };
+		0489F23B06048A896A917572BC03E76C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		0A276B5C7C4C353505074291D854F431 /* NWWebSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NWWebSocket.modulemap; sourceTree = "<group>"; };
 		0B32C323CD918E74390113D283732BDC /* PusherSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PusherSwift; path = PusherSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C37202C4A25DD90D5E0ADC808C313F2 /* OCPusherHost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCPusherHost.swift; path = Sources/ObjC/OCPusherHost.swift; sourceTree = "<group>"; };
-		11AE5578BE2F805C9BCE45BCCAB9D6B9 /* PusherChannels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannels.swift; path = Sources/Models/PusherChannels.swift; sourceTree = "<group>"; };
-		13AE3BE95F0F6BD6221D7846E31E7761 /* TweetNacl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TweetNacl-Info.plist"; sourceTree = "<group>"; };
-		167450499822F1F56FBB7585675D1848 /* NWWebSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWWebSocket-umbrella.h"; sourceTree = "<group>"; };
-		18D9082243FE3E7FF8B35E4874536B38 /* AuthMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthMethod.swift; path = Sources/Models/AuthMethod.swift; sourceTree = "<group>"; };
-		19DC615839ECB60F1B9F36BFA6C7BE2D /* PusherSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PusherSwift.modulemap; sourceTree = "<group>"; };
-		20441A6C6A6A5F1FBEB294576CE30631 /* NWWebSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWWebSocket-prefix.pch"; sourceTree = "<group>"; };
+		10480169508BEAA7BB9B0DB805EB72C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		13040EA7F2C4E6EA6EAB0486AC5E2E93 /* ASWaveformPlayerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASWaveformPlayerView-umbrella.h"; sourceTree = "<group>"; };
+		141CDA8EF4CF2EA3C4D61972F6FCDE1C /* PusherChannel+EncryptionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherChannel+EncryptionHelpers.swift"; path = "Sources/Extensions/PusherChannel+EncryptionHelpers.swift"; sourceTree = "<group>"; };
+		19189D0193B3414A8F8038658E1C5010 /* NWWebSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NWWebSocket-dummy.m"; sourceTree = "<group>"; };
+		193630ED5D9C8656A7B5384B73DE3135 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1CBBAD6D54EBBF3474114881DB8D0FC9 /* ChannelEventQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelEventQueue.swift; path = Sources/Services/ChannelEventQueue.swift; sourceTree = "<group>"; };
+		1D01B63C5221CFC2FFBB8C1AEDA7A210 /* SCSiriWaveformView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.debug.xcconfig; sourceTree = "<group>"; };
+		1D74B7444573D9061597D43C6B23C802 /* AuthRequestBuilderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRequestBuilderProtocol.swift; path = Sources/Protocols/AuthRequestBuilderProtocol.swift; sourceTree = "<group>"; };
+		1E00FE6DE8587028CBEAAE1A467C6093 /* TweetNacl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweetNacl-prefix.pch"; sourceTree = "<group>"; };
+		1F49AFBA8FF549AC49A7E115F1526EE4 /* PusherSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PusherSwift.debug.xcconfig; sourceTree = "<group>"; };
 		2115BE9415A787C19A148FD2C6CDE3EE /* Pods-ChatApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatApp-Info.plist"; sourceTree = "<group>"; };
-		2192D8C7FF79477AE9E9181B7106852A /* TweetNacl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TweetNacl.h; path = Sources/TweetNacl/TweetNacl.h; sourceTree = "<group>"; };
-		25304BD8835E33163442105261DB5F77 /* URL+Pusher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Pusher.swift"; path = "Sources/Extensions/URL+Pusher.swift"; sourceTree = "<group>"; };
-		26FF58DCAD65D45AC41C6673CE3DBC19 /* PusherAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherAuth.swift; path = Sources/Models/PusherAuth.swift; sourceTree = "<group>"; };
-		270BD683AB6AD88612CD586539B7C033 /* NWWebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NWWebSocket.swift; path = Sources/NWWebSocket/Model/Client/NWWebSocket.swift; sourceTree = "<group>"; };
-		27E008B2122839DC75DAF0C9ADC0B29D /* PusherSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PusherSwift-Info.plist"; sourceTree = "<group>"; };
-		3059BE1E3FD98ACFDB08B34D06C2E14E /* ctweetnacl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ctweetnacl.h; path = Sources/CTweetNacl/include/ctweetnacl.h; sourceTree = "<group>"; };
-		30EF8005E6CBA469368197555CD016F0 /* EventParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventParser.swift; path = Sources/Helpers/EventParser.swift; sourceTree = "<group>"; };
+		219151C8A80A293CD6A71064645B8C76 /* SCSiriWaveformView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCSiriWaveformView.h; path = SCSiriWaveformView/SCSiriWaveformView.h; sourceTree = "<group>"; };
+		2506796BE196362E20036E0830071538 /* TweetNacl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweetNacl-dummy.m"; sourceTree = "<group>"; };
+		251475D2B271D1AE9163D3AEE8929962 /* NWWebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NWWebSocket.swift; path = Sources/NWWebSocket/Model/Client/NWWebSocket.swift; sourceTree = "<group>"; };
+		29495D7C39698154968DC2EB7E5A1AB5 /* OCAuthMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAuthMethod.swift; path = Sources/ObjC/OCAuthMethod.swift; sourceTree = "<group>"; };
+		2ADA10E5EDEA21FC08E34F40AEF8A8BA /* PusherPresenceChannelMember.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherPresenceChannelMember.swift; path = Sources/Models/PusherPresenceChannelMember.swift; sourceTree = "<group>"; };
+		2B187090098CD5891A46940C64A1E6F7 /* SCSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCSiriWaveformView.modulemap; sourceTree = "<group>"; };
+		2C701C06C53D8914F81E02F5CCEB8BB4 /* NWWebSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWWebSocket-umbrella.h"; sourceTree = "<group>"; };
+		2C9C5AEB88A283934D14B105B4D8BB64 /* EventParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventParser.swift; path = Sources/Helpers/EventParser.swift; sourceTree = "<group>"; };
+		3016922978588962373E621FD42D8630 /* PusherSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PusherSwift-prefix.pch"; sourceTree = "<group>"; };
+		315AFC1F6575CEB3C7915F72A07137B9 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/Helpers/Logger.swift; sourceTree = "<group>"; };
+		31640EBE6B390D08E0CD8E2AB80F5986 /* SCSiriWaveformView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCSiriWaveformView.m; path = SCSiriWaveformView/SCSiriWaveformView.m; sourceTree = "<group>"; };
 		317CDB3617AE7CFBD3C9B5B901F8F543 /* TweetNacl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TweetNacl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3871C71073E4CB9B2C424C8D37BC1751 /* PusherError+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherError+ObjectiveC.swift"; path = "Sources/ObjC/PusherError+ObjectiveC.swift"; sourceTree = "<group>"; };
-		3A9EA80EE0F1B5ACCF030E94FE39D688 /* PusherChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannel.swift; path = Sources/Models/PusherChannel.swift; sourceTree = "<group>"; };
-		3B776635E3739143C45C913C93AB5A5E /* Constant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Sources/TweetNacl/Constant.swift; sourceTree = "<group>"; };
-		409EAA84594A5366E8B46B91462F584B /* NWWebSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NWWebSocket-dummy.m"; sourceTree = "<group>"; };
+		3FBF9A1E59C30E21A8CDA0EDFBD3845C /* PusherConnection+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherConnection+ObjectiveC.swift"; path = "Sources/ObjC/PusherConnection+ObjectiveC.swift"; sourceTree = "<group>"; };
+		41B833F0D5241941D7C5C15ADD2CF783 /* ConnectionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionState.swift; path = Sources/Models/ConnectionState.swift; sourceTree = "<group>"; };
+		45072E7B1E10CDC76D349E027F16EC58 /* PusherDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherDelegate.swift; path = Sources/Protocols/PusherDelegate.swift; sourceTree = "<group>"; };
 		478C79F53D003F0862F5235CEE06EC05 /* Pods-ChatApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatApp.modulemap"; sourceTree = "<group>"; };
-		47A3D91B7CA49D7A505FDE60DDBDAF0F /* TweetNacl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweetNacl-dummy.m"; sourceTree = "<group>"; };
-		4883DC5DA1CC4D22CC143AA6B5A1DD9B /* NWWebSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NWWebSocket.modulemap; sourceTree = "<group>"; };
-		4CA9D63EC9FE4660986C64604920E9AC /* TweetNacl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweetNacl-prefix.pch"; sourceTree = "<group>"; };
-		4FC4F57DC5B85DE2010D1F3BB18F4C26 /* PusherConnection+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherConnection+ObjectiveC.swift"; path = "Sources/ObjC/PusherConnection+ObjectiveC.swift"; sourceTree = "<group>"; };
-		535C93CABFBA750D6916D7AFA6116071 /* QueuedClientEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueuedClientEvent.swift; path = Sources/Models/QueuedClientEvent.swift; sourceTree = "<group>"; };
-		5A294C5C8DAD2BB84B31CDE86F09A690 /* ChannelsProtocolCloseCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelsProtocolCloseCode.swift; path = Sources/Models/ChannelsProtocolCloseCode.swift; sourceTree = "<group>"; };
-		5AA54D493197D8BFB8F1DE6C698EEB70 /* ctweetnacl.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ctweetnacl.c; path = Sources/CTweetNacl/ctweetnacl.c; sourceTree = "<group>"; };
-		63B40BC2BAFF10022E05FDD245D455C4 /* NWWebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWWebSocket.release.xcconfig; sourceTree = "<group>"; };
-		67014C9D7CFAB7E97102F881C7EA4317 /* PusherChannel+EncryptionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherChannel+EncryptionHelpers.swift"; path = "Sources/Extensions/PusherChannel+EncryptionHelpers.swift"; sourceTree = "<group>"; };
+		484979FB494EAB7ACD6F36E3CE3B23B9 /* WebSocketConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketConnection.swift; path = Sources/NWWebSocket/Protocol/WebSocketConnection.swift; sourceTree = "<group>"; };
+		4BECFF59CFB4EF34A8B2E9B7A114DAEF /* NWWebSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NWWebSocket-Info.plist"; sourceTree = "<group>"; };
+		4C74B49F74A43E0A6E247274619FD481 /* SCSiriWaveformView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCSiriWaveformView-Info.plist"; sourceTree = "<group>"; };
+		5470CACEB16459F61C00C8B649D92FAA /* TweetNacl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TweetNacl-Info.plist"; sourceTree = "<group>"; };
+		56C5D2B9DC4EA6FC5C354F8DDA429B99 /* PusherSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PusherSwift-Info.plist"; sourceTree = "<group>"; };
+		5989829343892A498C010187A08167B1 /* TweetNacl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TweetNacl.h; path = Sources/TweetNacl/TweetNacl.h; sourceTree = "<group>"; };
+		5B3F4A1A4259855C2F0E165A28470F16 /* AudioAnalyser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioAnalyser.swift; path = ASWaveformPlayerView/Classes/AudioAnalyser.swift; sourceTree = "<group>"; };
+		5CB14A01C22CC416EF2EB0108C5C58ED /* PusherClientOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherClientOptions.swift; path = Sources/Models/PusherClientOptions.swift; sourceTree = "<group>"; };
+		6453F3D2921F26C0045E1213BB4C8693 /* PusherSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PusherSwift-dummy.m"; sourceTree = "<group>"; };
+		656527B8C55C13E154B5A66AFD43C20A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		699CF49FFF827420483397C564092F3D /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		6B46E257FE9DD3D4BC363BA455E9C593 /* Pods-ChatApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		719EF5B96F42BA751125EC58D7ADCF1D /* PusherSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherSwift.swift; path = Sources/PusherSwift.swift; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		733AB27C877A42F89C2F6A376367A570 /* EventQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventQueue.swift; path = Sources/Protocols/EventQueue.swift; sourceTree = "<group>"; };
-		752159FBC40D75C3CD6218228261C0F7 /* PusherClientOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherClientOptions.swift; path = Sources/Models/PusherClientOptions.swift; sourceTree = "<group>"; };
-		75A838891CB5A022DE1C4CE5CB714E34 /* NWWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWWebSocket.debug.xcconfig; sourceTree = "<group>"; };
-		7BF2410241D05A2DC9916A309CA4D369 /* PusherConnection+WebsocketDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherConnection+WebsocketDelegate.swift"; path = "Sources/Extensions/PusherConnection+WebsocketDelegate.swift"; sourceTree = "<group>"; };
-		7CC77DBA72BF00848BAA4C5B88C22409 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Models/Constants.swift; sourceTree = "<group>"; };
+		6BEBB7FEB1E7683ED0F8091F5B8A9B7A /* PusherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherError.swift; path = Sources/Models/PusherError.swift; sourceTree = "<group>"; };
+		700E8F23C4C6FA35407FA5979C913D4E /* EventQueueDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventQueueDelegate.swift; path = Sources/Protocols/EventQueueDelegate.swift; sourceTree = "<group>"; };
+		70FE23DB4BA77685D69A5B1B7260EE49 /* Authorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorizer.swift; path = Sources/Protocols/Authorizer.swift; sourceTree = "<group>"; };
+		73E5AA6D306362B30E5D1B9D798DCD94 /* SCSiriWaveformView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCSiriWaveformView.release.xcconfig; sourceTree = "<group>"; };
+		773A95D71CAD27F97FD9D55CDC1FA1B4 /* ASWaveformPlayerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASWaveformPlayerView.release.xcconfig; sourceTree = "<group>"; };
+		7945ECC7C9C01F243FAA593789207580 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Sources/Models/Constants.swift; sourceTree = "<group>"; };
+		7B1661129A8F99C925A6A211B6F0DD32 /* PusherError+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherError+ObjectiveC.swift"; path = "Sources/ObjC/PusherError+ObjectiveC.swift"; sourceTree = "<group>"; };
+		7D162007E7C9C5FA0B2738A6FF2D64CC /* TweetNacl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweetNacl.release.xcconfig; sourceTree = "<group>"; };
+		7FA64E216737B653420A78E3D11C858D /* ASWaveformPlayerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ASWaveformPlayerView.debug.xcconfig; sourceTree = "<group>"; };
+		7FBE78E12879A6CEBE9DC7DD36241BE6 /* PusherChannelType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannelType.swift; path = Sources/Models/PusherChannelType.swift; sourceTree = "<group>"; };
+		80A2EBC154DDABC8AD2D6598FAF7AF1A /* ASWaveformPlayerView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ASWaveformPlayerView-Info.plist"; sourceTree = "<group>"; };
 		80C1B6ADE843AA46135CE2255028F887 /* Pods-ChatApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatApp-umbrella.h"; sourceTree = "<group>"; };
-		811FE485A577EC0B242EFB7A86F4094E /* PusherPresenceChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherPresenceChannel.swift; path = Sources/Models/PusherPresenceChannel.swift; sourceTree = "<group>"; };
-		89D0287E8750786875C37E7288378C55 /* ChannelEventQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelEventQueue.swift; path = Sources/Services/ChannelEventQueue.swift; sourceTree = "<group>"; };
-		8B8EFB07585EC1B5438F9412314E3A6C /* AuthRequestBuilderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthRequestBuilderProtocol.swift; path = Sources/Protocols/AuthRequestBuilderProtocol.swift; sourceTree = "<group>"; };
-		9437F5C5C5CCA939B81BB07B83E32D2C /* ChannelEventFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelEventFactory.swift; path = Sources/Services/ChannelEventFactory.swift; sourceTree = "<group>"; };
-		9800ABFC87B09634B3DAE7758021E32D /* TweetNacl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweetNacl.release.xcconfig; sourceTree = "<group>"; };
+		80EB4C95A211FCE0F2837C61DBC472FC /* PusherChannels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannels.swift; path = Sources/Models/PusherChannels.swift; sourceTree = "<group>"; };
+		830DC758CE89836B130B50F4DA7A0267 /* SCSiriWaveformView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCSiriWaveformView; path = SCSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846D0A8584C56A732EC2F9CDBA4AC6D0 /* PusherSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PusherSwift-umbrella.h"; sourceTree = "<group>"; };
+		871B58B322529CD0FE74584436DBDB13 /* ChannelEventFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelEventFactory.swift; path = Sources/Services/ChannelEventFactory.swift; sourceTree = "<group>"; };
+		88E35345AAAD48909C1216A92647202B /* PusherHost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherHost.swift; path = Sources/Models/PusherHost.swift; sourceTree = "<group>"; };
+		8AA024286D21C8617C124D8C3AE83DF1 /* ASWaveformPlayerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ASWaveformPlayerView.modulemap; sourceTree = "<group>"; };
+		94A0115CAF4E1AA3A9EBE8AEB8A45FF1 /* OCPusherHost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCPusherHost.swift; path = Sources/ObjC/OCPusherHost.swift; sourceTree = "<group>"; };
+		94FB5B7155B6C193C723E278E18452EF /* NWConnection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NWConnection+Extension.swift"; path = "Sources/NWWebSocket/Extension/NWConnection+Extension.swift"; sourceTree = "<group>"; };
+		95DFFE31314970FD38E1954EF1B1F730 /* NWWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWWebSocket.debug.xcconfig; sourceTree = "<group>"; };
+		9873D71DF534F078089E50DC75A3C5D1 /* AuthError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthError.swift; path = Sources/Models/AuthError.swift; sourceTree = "<group>"; };
+		9A32D1A3E519CCB3541E608C2ED9E94E /* PusherConnection+WebsocketDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherConnection+WebsocketDelegate.swift"; path = "Sources/Extensions/PusherConnection+WebsocketDelegate.swift"; sourceTree = "<group>"; };
+		9BA9D90542BD3ADE3BA400A5C8E6AE41 /* EventError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventError.swift; path = Sources/Models/EventError.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E29296BB1B975554C550AEF8A59EC37 /* PusherGlobalChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherGlobalChannel.swift; path = Sources/Models/PusherGlobalChannel.swift; sourceTree = "<group>"; };
-		9F518FBA3940BFFB510D446DF959A27A /* ConnectionState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionState.swift; path = Sources/Models/ConnectionState.swift; sourceTree = "<group>"; };
-		A0206187EDB94C6B9230AFDF5B64BD6C /* NWConnection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NWConnection+Extension.swift"; path = "Sources/NWWebSocket/Extension/NWConnection+Extension.swift"; sourceTree = "<group>"; };
-		A4F8C307705B8FD0E0A441DA6AC37C5B /* NWWebSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NWWebSocket-Info.plist"; sourceTree = "<group>"; };
-		A9D96187B4F58C8EE4C39C9278CF79C3 /* PusherSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PusherSwift-prefix.pch"; sourceTree = "<group>"; };
-		AA1343A5E1DEA4DCE6FEED9BFBCB2A02 /* EventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = Sources/Models/EventHandler.swift; sourceTree = "<group>"; };
-		AA775F724FF61BB516F75E77EE43CBE8 /* AuthError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthError.swift; path = Sources/Models/AuthError.swift; sourceTree = "<group>"; };
+		9F3FC2FA452E57CC414CA9741047C2F4 /* PusherSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherSwift.swift; path = Sources/PusherSwift.swift; sourceTree = "<group>"; };
+		AB49877648F7450ADA0FC40D66CE29AD /* SCSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
 		AF011A981761287B3276BCBA6985C2BB /* Pods-ChatApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatApp-dummy.m"; sourceTree = "<group>"; };
-		AF4395E1909DA2746CF4CA025C300906 /* PusherPresenceChannelMember.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherPresenceChannelMember.swift; path = Sources/Models/PusherPresenceChannelMember.swift; sourceTree = "<group>"; };
-		B368888066EF4A270B54170648B8C74E /* EventQueueDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventQueueDelegate.swift; path = Sources/Protocols/EventQueueDelegate.swift; sourceTree = "<group>"; };
-		B50554DE0CBBE70A5687150B11BFDC8F /* TweetNacl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TweetNacl.modulemap; sourceTree = "<group>"; };
-		B8F023133BBB086D7FAFDBFB022F068C /* Authorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authorizer.swift; path = Sources/Protocols/Authorizer.swift; sourceTree = "<group>"; };
-		B935202D059558CB9F2B9D7FAB06D163 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = Sources/Helpers/Crypto.swift; sourceTree = "<group>"; };
-		C0A2C5E154E267976A1F63A499D69082 /* PusherChannelType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannelType.swift; path = Sources/Models/PusherChannelType.swift; sourceTree = "<group>"; };
-		C13445077D5E9401E489666583922AC5 /* PusherConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherConnection.swift; path = Sources/Services/PusherConnection.swift; sourceTree = "<group>"; };
-		C46D6E66D88BCF12F0E834C1589839F5 /* PusherDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherDelegate.swift; path = Sources/Protocols/PusherDelegate.swift; sourceTree = "<group>"; };
+		B27D26F2B376598439B397203344EB48 /* TweetNacl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TweetNacl.modulemap; sourceTree = "<group>"; };
+		B28DB9818458A81D1818BAAE5C5677A5 /* ChannelsProtocolCloseCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChannelsProtocolCloseCode.swift; path = Sources/Models/ChannelsProtocolCloseCode.swift; sourceTree = "<group>"; };
+		B3712DA052D134D4E22CB8809EC55C75 /* ctweetnacl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ctweetnacl.h; path = Sources/CTweetNacl/include/ctweetnacl.h; sourceTree = "<group>"; };
+		B3CC65CF4F78CBBEFA5C058A29F10173 /* PusherClientOptions+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherClientOptions+ObjectiveC.swift"; path = "Sources/ObjC/PusherClientOptions+ObjectiveC.swift"; sourceTree = "<group>"; };
+		B95581843CB7CBEA7D9F32496236BA6E /* ASWaveformPlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASWaveformPlayerView.swift; path = ASWaveformPlayerView/Classes/ASWaveformPlayerView.swift; sourceTree = "<group>"; };
+		C4F23165C050F5DAA6CA66DFE0AED0C3 /* EventFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventFactory.swift; path = Sources/Protocols/EventFactory.swift; sourceTree = "<group>"; };
 		C5ABAF63D10F5E127F096A2FF2FB8AB1 /* Pods-ChatApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CA101FCEEF41046EAC04C7A3395683E6 /* PusherEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherEvent.swift; path = Sources/Models/PusherEvent.swift; sourceTree = "<group>"; };
-		D0C3B848D73DDB284DBFA413E1B3F980 /* PusherHost+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherHost+ObjectiveC.swift"; path = "Sources/ObjC/PusherHost+ObjectiveC.swift"; sourceTree = "<group>"; };
-		D2733FEA7AD04950BEFB1C010C14CEF6 /* PusherClientOptions+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherClientOptions+ObjectiveC.swift"; path = "Sources/ObjC/PusherClientOptions+ObjectiveC.swift"; sourceTree = "<group>"; };
-		DC80D1350F1F920AD839DE09EC73642F /* PusherHost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherHost.swift; path = Sources/Models/PusherHost.swift; sourceTree = "<group>"; };
-		DE2749783F5D36B1C046C95BCED1095D /* TweetNacl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweetNacl-umbrella.h"; sourceTree = "<group>"; };
-		E4DBB88D317A166D1E665AEC1BFADF9E /* WebSocketConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketConnection.swift; path = Sources/NWWebSocket/Protocol/WebSocketConnection.swift; sourceTree = "<group>"; };
+		CD31CDD6B4E60497F621666A1DD6E5B7 /* PusherHost+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PusherHost+ObjectiveC.swift"; path = "Sources/ObjC/PusherHost+ObjectiveC.swift"; sourceTree = "<group>"; };
+		CF1D526A6B0B7863236DF8A88849A404 /* ASWaveformPlayerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ASWaveformPlayerView-dummy.m"; sourceTree = "<group>"; };
+		CF971B7406D1407C7553E97D1C49DD44 /* URL+Pusher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Pusher.swift"; path = "Sources/Extensions/URL+Pusher.swift"; sourceTree = "<group>"; };
+		D000DEEB042E13D4DBFA169A28BAB58F /* PusherGlobalChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherGlobalChannel.swift; path = Sources/Models/PusherGlobalChannel.swift; sourceTree = "<group>"; };
+		D23BD88678C97E74235A00B3EC1CE57A /* AuthMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthMethod.swift; path = Sources/Models/AuthMethod.swift; sourceTree = "<group>"; };
+		D72E3B505C7B62E7CE7614E14297AEF1 /* AuthMethod+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AuthMethod+ObjectiveC.swift"; path = "Sources/ObjC/AuthMethod+ObjectiveC.swift"; sourceTree = "<group>"; };
+		D8BBA7DEA1899A3A9D932136DCEA2C2E /* SCSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
+		D9EA82AA8B36C5C3E9274050FD8DDFB4 /* NWWebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWWebSocket.release.xcconfig; sourceTree = "<group>"; };
+		DA71FCB16EF5774528A35CD837396E65 /* PusherConnection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherConnection.swift; path = Sources/Services/PusherConnection.swift; sourceTree = "<group>"; };
+		DBAD8813A18401636E0FD4CF3D4CAAFF /* PusherSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PusherSwift.release.xcconfig; sourceTree = "<group>"; };
+		DBB0BA7C61AEF60EF1913C30F4EA4DE5 /* PusherAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherAuth.swift; path = Sources/Models/PusherAuth.swift; sourceTree = "<group>"; };
+		DDAC2A415E46A78369E9327A5612E92D /* SCSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
+		DFB1306D07462BCB6F7961DE72D2CB36 /* EventQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventQueue.swift; path = Sources/Protocols/EventQueue.swift; sourceTree = "<group>"; };
+		E0E2408D56EFE97479FEED7AA7A2E79A /* TweetNacl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweetNacl.swift; path = Sources/TweetNacl/TweetNacl.swift; sourceTree = "<group>"; };
+		E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E5839FD741ABECFEE6A2F11F62855284 /* PusherSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PusherSwift.modulemap; sourceTree = "<group>"; };
 		E7192481BB5D3F04E8A606F149CD8E9D /* NWWebSocket */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NWWebSocket; path = NWWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E849AF10428E54857225B4C33F4ADC1B /* PusherSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PusherSwift-dummy.m"; sourceTree = "<group>"; };
-		EAF6409826CAB83E0E5766F3341B814C /* PusherSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PusherSwift.release.xcconfig; sourceTree = "<group>"; };
+		E7A1D2BB5059A82D7A171E63A1D0B29C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		E925E66FED5739DC9C18D3663FA514C0 /* PusherPresenceChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherPresenceChannel.swift; path = Sources/Models/PusherPresenceChannel.swift; sourceTree = "<group>"; };
+		EB1CB0326CF1128F2BA1373CDE211218 /* NWWebSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWWebSocket-prefix.pch"; sourceTree = "<group>"; };
+		F06EA6A7FCD28CEB396B9F4AB1AF6D24 /* QueuedClientEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueuedClientEvent.swift; path = Sources/Models/QueuedClientEvent.swift; sourceTree = "<group>"; };
+		F0BD16D62539164EBAB191C7A93D16E9 /* EventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = Sources/Models/EventHandler.swift; sourceTree = "<group>"; };
 		F1B8738E5AF68B43CE2044E35F9A9CDF /* Pods-ChatApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ChatApp"; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1CF9069578053D15B2D3CBE0AF061C3 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/Helpers/Logger.swift; sourceTree = "<group>"; };
-		F27AB72B804A4B8CE091022627E75459 /* OCAuthMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OCAuthMethod.swift; path = Sources/ObjC/OCAuthMethod.swift; sourceTree = "<group>"; };
-		F2FD348D7CBDF8D2CC826ED931A1DF7A /* EventFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventFactory.swift; path = Sources/Protocols/EventFactory.swift; sourceTree = "<group>"; };
+		F4424350B945530B5EA9534E3C3DD540 /* ASWaveformPlayerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ASWaveformPlayerView-prefix.pch"; sourceTree = "<group>"; };
+		F460BB79C47D788CCA3AE0ACD4DC0841 /* ASWaveformPlayerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ASWaveformPlayerView; path = ASWaveformPlayerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F495233B677AA4BB090B8C4290C85F09 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
-		F8CE23DFBCD0FCC7EAD196F712876E6B /* PusherSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PusherSwift.debug.xcconfig; sourceTree = "<group>"; };
+		F77EC9DDEA45DF47014C4D057B0A7055 /* TweetNacl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweetNacl-umbrella.h"; sourceTree = "<group>"; };
+		F7AAA4BAB175201867E26115E317ED94 /* TweetNacl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweetNacl.debug.xcconfig; sourceTree = "<group>"; };
+		F961C89DB12FF654507FF1D811852DA9 /* ctweetnacl.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ctweetnacl.c; path = Sources/CTweetNacl/ctweetnacl.c; sourceTree = "<group>"; };
+		FA0B2604CD06D6639B99072E7CC4C82D /* Pusher+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Pusher+ObjectiveC.swift"; path = "Sources/ObjC/Pusher+ObjectiveC.swift"; sourceTree = "<group>"; };
 		FAD89D3FED2CDFE26ECA8380BD9B7A12 /* Pods-ChatApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatApp-frameworks.sh"; sourceTree = "<group>"; };
-		FF92E59AC8036E4289FD10370D16DDD1 /* AuthMethod+ObjectiveC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AuthMethod+ObjectiveC.swift"; path = "Sources/ObjC/AuthMethod+ObjectiveC.swift"; sourceTree = "<group>"; };
+		FADBA894CC6D5DE8F2AE7352668C6EA9 /* PusherChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PusherChannel.swift; path = Sources/Models/PusherChannel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A87D48981BAB3A609A044446EF352BCF /* Frameworks */ = {
+		5BBD8DA652969D29E637D6959E483DA0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8238957B87DCB4170879529C9E643483 /* Foundation.framework in Frameworks */,
+				3AA0808CE119E6C47BEE61DF504FB3CD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6F8C0387E3FCAC54895B8D0CC265146 /* Frameworks */ = {
+		5DD7B18E47C8ADC09D51F8C3C8CAB7C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA8488A43C9DB0D67370D5895BBA98D /* Foundation.framework in Frameworks */,
+				DCA609F9950065E1D1699CD0D995D987 /* AVFoundation.framework in Frameworks */,
+				A4CF57F0D4EC6E1D1E922232B0A14CAC /* CoreGraphics.framework in Frameworks */,
+				FC3AA786E8E86F5B3089D6AB3254949B /* Foundation.framework in Frameworks */,
+				8178FA478C3AE12EC7D9EA34DE2E2163 /* QuartzCore.framework in Frameworks */,
+				E8B1EE4E24501DF073BA489FE8CE71CF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8957DD6F23FE29962ABDF41ED40DCCC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C26F4AA7372F19970C2713F20C925AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0CBB225841E04BAA5B56E861F9D95A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F0B6C16ECEAE58E6E68B992F07FD9EF /* Accelerate.framework in Frameworks */,
+				2A35B3D564EFF0B8A0338E1BCC143AF3 /* AVFoundation.framework in Frameworks */,
+				D523BD8BEFB1A91901E06255B2213F35 /* Foundation.framework in Frameworks */,
+				66902AD8C148794237A5D75E172CE75D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +315,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D931E784AA1173296E7130806046131 /* TweetNacl */ = {
+			isa = PBXGroup;
+			children = (
+				030B4D820DAE38C97CF0CC004F7781C0 /* Constant.swift */,
+				F961C89DB12FF654507FF1D811852DA9 /* ctweetnacl.c */,
+				B3712DA052D134D4E22CB8809EC55C75 /* ctweetnacl.h */,
+				5989829343892A498C010187A08167B1 /* TweetNacl.h */,
+				E0E2408D56EFE97479FEED7AA7A2E79A /* TweetNacl.swift */,
+				B26E6CD57891554EF081B1BC7EE5D18F /* Support Files */,
+			);
+			path = TweetNacl;
+			sourceTree = "<group>";
+		};
 		10E6196F9D858FE3D78D9313F3A07281 /* Pods-ChatApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,27 +345,84 @@
 			path = "Target Support Files/Pods-ChatApp";
 			sourceTree = "<group>";
 		};
-		19883B443E58286174306C436954AFB2 /* Support Files */ = {
+		16B118EE4E16FF3783FA8DE7A8D822DB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				19DC615839ECB60F1B9F36BFA6C7BE2D /* PusherSwift.modulemap */,
-				E849AF10428E54857225B4C33F4ADC1B /* PusherSwift-dummy.m */,
-				27E008B2122839DC75DAF0C9ADC0B29D /* PusherSwift-Info.plist */,
-				A9D96187B4F58C8EE4C39C9278CF79C3 /* PusherSwift-prefix.pch */,
-				019283B5D257D9CB272048864C019BB4 /* PusherSwift-umbrella.h */,
-				F8CE23DFBCD0FCC7EAD196F712876E6B /* PusherSwift.debug.xcconfig */,
-				EAF6409826CAB83E0E5766F3341B814C /* PusherSwift.release.xcconfig */,
+				0A276B5C7C4C353505074291D854F431 /* NWWebSocket.modulemap */,
+				19189D0193B3414A8F8038658E1C5010 /* NWWebSocket-dummy.m */,
+				4BECFF59CFB4EF34A8B2E9B7A114DAEF /* NWWebSocket-Info.plist */,
+				EB1CB0326CF1128F2BA1373CDE211218 /* NWWebSocket-prefix.pch */,
+				2C701C06C53D8914F81E02F5CCEB8BB4 /* NWWebSocket-umbrella.h */,
+				95DFFE31314970FD38E1954EF1B1F730 /* NWWebSocket.debug.xcconfig */,
+				D9EA82AA8B36C5C3E9274050FD8DDFB4 /* NWWebSocket.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NWWebSocket";
+			sourceTree = "<group>";
+		};
+		22B38B508B515697FCDB8CBC029E5297 /* ASWaveformPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				B95581843CB7CBEA7D9F32496236BA6E /* ASWaveformPlayerView.swift */,
+				5B3F4A1A4259855C2F0E165A28470F16 /* AudioAnalyser.swift */,
+				2E58EC67E5C23C16B02870D981BE9A91 /* Support Files */,
+			);
+			path = ASWaveformPlayerView;
+			sourceTree = "<group>";
+		};
+		2B1BEF83A389C774E78EF07F545A6EDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5839FD741ABECFEE6A2F11F62855284 /* PusherSwift.modulemap */,
+				6453F3D2921F26C0045E1213BB4C8693 /* PusherSwift-dummy.m */,
+				56C5D2B9DC4EA6FC5C354F8DDA429B99 /* PusherSwift-Info.plist */,
+				3016922978588962373E621FD42D8630 /* PusherSwift-prefix.pch */,
+				846D0A8584C56A732EC2F9CDBA4AC6D0 /* PusherSwift-umbrella.h */,
+				1F49AFBA8FF549AC49A7E115F1526EE4 /* PusherSwift.debug.xcconfig */,
+				DBAD8813A18401636E0FD4CF3D4CAAFF /* PusherSwift.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PusherSwift";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		2E58EC67E5C23C16B02870D981BE9A91 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				8AA024286D21C8617C124D8C3AE83DF1 /* ASWaveformPlayerView.modulemap */,
+				CF1D526A6B0B7863236DF8A88849A404 /* ASWaveformPlayerView-dummy.m */,
+				80A2EBC154DDABC8AD2D6598FAF7AF1A /* ASWaveformPlayerView-Info.plist */,
+				F4424350B945530B5EA9534E3C3DD540 /* ASWaveformPlayerView-prefix.pch */,
+				13040EA7F2C4E6EA6EAB0486AC5E2E93 /* ASWaveformPlayerView-umbrella.h */,
+				7FA64E216737B653420A78E3D11C858D /* ASWaveformPlayerView.debug.xcconfig */,
+				773A95D71CAD27F97FD9D55CDC1FA1B4 /* ASWaveformPlayerView.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/ASWaveformPlayerView";
+			sourceTree = "<group>";
+		};
+		49501CBD290C35EB85750FBB0095A7B6 /* SCSiriWaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				219151C8A80A293CD6A71064645B8C76 /* SCSiriWaveformView.h */,
+				31640EBE6B390D08E0CD8E2AB80F5986 /* SCSiriWaveformView.m */,
+				52B534E100898473FE8A495E10F7B020 /* Support Files */,
+			);
+			path = SCSiriWaveformView;
+			sourceTree = "<group>";
+		};
+		52B534E100898473FE8A495E10F7B020 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B187090098CD5891A46940C64A1E6F7 /* SCSiriWaveformView.modulemap */,
+				D8BBA7DEA1899A3A9D932136DCEA2C2E /* SCSiriWaveformView-dummy.m */,
+				4C74B49F74A43E0A6E247274619FD481 /* SCSiriWaveformView-Info.plist */,
+				AB49877648F7450ADA0FC40D66CE29AD /* SCSiriWaveformView-prefix.pch */,
+				DDAC2A415E46A78369E9327A5612E92D /* SCSiriWaveformView-umbrella.h */,
+				1D01B63C5221CFC2FFBB8C1AEDA7A210 /* SCSiriWaveformView.debug.xcconfig */,
+				73E5AA6D306362B30E5D1B9D798DCD94 /* SCSiriWaveformView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCSiriWaveformView";
 			sourceTree = "<group>";
 		};
 		64EC178325B076CFE489E2F91650B4B9 /* Targets Support Files */ = {
@@ -284,146 +433,135 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8D27601F93612CACC9EB2663BC8BED1E /* Pods */ = {
+		689F7EBB5B123C609B6E5F8FAAAB3021 /* NWWebSocket */ = {
 			isa = PBXGroup;
 			children = (
-				B6D3C679C8B0F5F40AF0A0D5F4D88A54 /* NWWebSocket */,
-				9B6C56AD9702E9C43F72650E58047FF6 /* PusherSwift */,
-				CE33BA19D06619CD52A06AB7567EE91D /* TweetNacl */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8EBEBD99AB92490B76E68E6462A6B515 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B50554DE0CBBE70A5687150B11BFDC8F /* TweetNacl.modulemap */,
-				47A3D91B7CA49D7A505FDE60DDBDAF0F /* TweetNacl-dummy.m */,
-				13AE3BE95F0F6BD6221D7846E31E7761 /* TweetNacl-Info.plist */,
-				4CA9D63EC9FE4660986C64604920E9AC /* TweetNacl-prefix.pch */,
-				DE2749783F5D36B1C046C95BCED1095D /* TweetNacl-umbrella.h */,
-				067E32E6ED18F041D44B2D1B42B9D6D7 /* TweetNacl.debug.xcconfig */,
-				9800ABFC87B09634B3DAE7758021E32D /* TweetNacl.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TweetNacl";
-			sourceTree = "<group>";
-		};
-		9B6C56AD9702E9C43F72650E58047FF6 /* PusherSwift */ = {
-			isa = PBXGroup;
-			children = (
-				AA775F724FF61BB516F75E77EE43CBE8 /* AuthError.swift */,
-				18D9082243FE3E7FF8B35E4874536B38 /* AuthMethod.swift */,
-				FF92E59AC8036E4289FD10370D16DDD1 /* AuthMethod+ObjectiveC.swift */,
-				B8F023133BBB086D7FAFDBFB022F068C /* Authorizer.swift */,
-				8B8EFB07585EC1B5438F9412314E3A6C /* AuthRequestBuilderProtocol.swift */,
-				9437F5C5C5CCA939B81BB07B83E32D2C /* ChannelEventFactory.swift */,
-				89D0287E8750786875C37E7288378C55 /* ChannelEventQueue.swift */,
-				5A294C5C8DAD2BB84B31CDE86F09A690 /* ChannelsProtocolCloseCode.swift */,
-				9F518FBA3940BFFB510D446DF959A27A /* ConnectionState.swift */,
-				7CC77DBA72BF00848BAA4C5B88C22409 /* Constants.swift */,
-				B935202D059558CB9F2B9D7FAB06D163 /* Crypto.swift */,
-				08D6A97C3BFBE30B55D95EAFE26121E4 /* EventError.swift */,
-				F2FD348D7CBDF8D2CC826ED931A1DF7A /* EventFactory.swift */,
-				AA1343A5E1DEA4DCE6FEED9BFBCB2A02 /* EventHandler.swift */,
-				30EF8005E6CBA469368197555CD016F0 /* EventParser.swift */,
-				733AB27C877A42F89C2F6A376367A570 /* EventQueue.swift */,
-				B368888066EF4A270B54170648B8C74E /* EventQueueDelegate.swift */,
-				F1CF9069578053D15B2D3CBE0AF061C3 /* Logger.swift */,
-				F27AB72B804A4B8CE091022627E75459 /* OCAuthMethod.swift */,
-				0C37202C4A25DD90D5E0ADC808C313F2 /* OCPusherHost.swift */,
-				0A54512A7B6634FFE5820D56A41288F5 /* Pusher+ObjectiveC.swift */,
-				26FF58DCAD65D45AC41C6673CE3DBC19 /* PusherAuth.swift */,
-				3A9EA80EE0F1B5ACCF030E94FE39D688 /* PusherChannel.swift */,
-				67014C9D7CFAB7E97102F881C7EA4317 /* PusherChannel+EncryptionHelpers.swift */,
-				11AE5578BE2F805C9BCE45BCCAB9D6B9 /* PusherChannels.swift */,
-				C0A2C5E154E267976A1F63A499D69082 /* PusherChannelType.swift */,
-				752159FBC40D75C3CD6218228261C0F7 /* PusherClientOptions.swift */,
-				D2733FEA7AD04950BEFB1C010C14CEF6 /* PusherClientOptions+ObjectiveC.swift */,
-				C13445077D5E9401E489666583922AC5 /* PusherConnection.swift */,
-				4FC4F57DC5B85DE2010D1F3BB18F4C26 /* PusherConnection+ObjectiveC.swift */,
-				7BF2410241D05A2DC9916A309CA4D369 /* PusherConnection+WebsocketDelegate.swift */,
-				C46D6E66D88BCF12F0E834C1589839F5 /* PusherDelegate.swift */,
-				0AA334E3D2645BB36B5F49E6C479E144 /* PusherError.swift */,
-				3871C71073E4CB9B2C424C8D37BC1751 /* PusherError+ObjectiveC.swift */,
-				CA101FCEEF41046EAC04C7A3395683E6 /* PusherEvent.swift */,
-				9E29296BB1B975554C550AEF8A59EC37 /* PusherGlobalChannel.swift */,
-				DC80D1350F1F920AD839DE09EC73642F /* PusherHost.swift */,
-				D0C3B848D73DDB284DBFA413E1B3F980 /* PusherHost+ObjectiveC.swift */,
-				811FE485A577EC0B242EFB7A86F4094E /* PusherPresenceChannel.swift */,
-				AF4395E1909DA2746CF4CA025C300906 /* PusherPresenceChannelMember.swift */,
-				719EF5B96F42BA751125EC58D7ADCF1D /* PusherSwift.swift */,
-				535C93CABFBA750D6916D7AFA6116071 /* QueuedClientEvent.swift */,
-				25304BD8835E33163442105261DB5F77 /* URL+Pusher.swift */,
-				19883B443E58286174306C436954AFB2 /* Support Files */,
-			);
-			path = PusherSwift;
-			sourceTree = "<group>";
-		};
-		B6D3C679C8B0F5F40AF0A0D5F4D88A54 /* NWWebSocket */ = {
-			isa = PBXGroup;
-			children = (
-				A0206187EDB94C6B9230AFDF5B64BD6C /* NWConnection+Extension.swift */,
-				270BD683AB6AD88612CD586539B7C033 /* NWWebSocket.swift */,
-				E4DBB88D317A166D1E665AEC1BFADF9E /* WebSocketConnection.swift */,
-				F0ACA400A88B2477B43FBDF34B85A963 /* Support Files */,
+				94FB5B7155B6C193C723E278E18452EF /* NWConnection+Extension.swift */,
+				251475D2B271D1AE9163D3AEE8929962 /* NWWebSocket.swift */,
+				484979FB494EAB7ACD6F36E3CE3B23B9 /* WebSocketConnection.swift */,
+				16B118EE4E16FF3783FA8DE7A8D822DB /* Support Files */,
 			);
 			path = NWWebSocket;
 			sourceTree = "<group>";
 		};
-		CE33BA19D06619CD52A06AB7567EE91D /* TweetNacl */ = {
+		A3679450107FF9E5578E978F2C36A374 /* PusherSwift */ = {
 			isa = PBXGroup;
 			children = (
-				3B776635E3739143C45C913C93AB5A5E /* Constant.swift */,
-				5AA54D493197D8BFB8F1DE6C698EEB70 /* ctweetnacl.c */,
-				3059BE1E3FD98ACFDB08B34D06C2E14E /* ctweetnacl.h */,
-				2192D8C7FF79477AE9E9181B7106852A /* TweetNacl.h */,
-				000D4A4D5564C62E8BB1416FA8E04D97 /* TweetNacl.swift */,
-				8EBEBD99AB92490B76E68E6462A6B515 /* Support Files */,
+				9873D71DF534F078089E50DC75A3C5D1 /* AuthError.swift */,
+				D23BD88678C97E74235A00B3EC1CE57A /* AuthMethod.swift */,
+				D72E3B505C7B62E7CE7614E14297AEF1 /* AuthMethod+ObjectiveC.swift */,
+				70FE23DB4BA77685D69A5B1B7260EE49 /* Authorizer.swift */,
+				1D74B7444573D9061597D43C6B23C802 /* AuthRequestBuilderProtocol.swift */,
+				871B58B322529CD0FE74584436DBDB13 /* ChannelEventFactory.swift */,
+				1CBBAD6D54EBBF3474114881DB8D0FC9 /* ChannelEventQueue.swift */,
+				B28DB9818458A81D1818BAAE5C5677A5 /* ChannelsProtocolCloseCode.swift */,
+				41B833F0D5241941D7C5C15ADD2CF783 /* ConnectionState.swift */,
+				7945ECC7C9C01F243FAA593789207580 /* Constants.swift */,
+				000E475BE399081E1E4EAB322A579D17 /* Crypto.swift */,
+				9BA9D90542BD3ADE3BA400A5C8E6AE41 /* EventError.swift */,
+				C4F23165C050F5DAA6CA66DFE0AED0C3 /* EventFactory.swift */,
+				F0BD16D62539164EBAB191C7A93D16E9 /* EventHandler.swift */,
+				2C9C5AEB88A283934D14B105B4D8BB64 /* EventParser.swift */,
+				DFB1306D07462BCB6F7961DE72D2CB36 /* EventQueue.swift */,
+				700E8F23C4C6FA35407FA5979C913D4E /* EventQueueDelegate.swift */,
+				315AFC1F6575CEB3C7915F72A07137B9 /* Logger.swift */,
+				29495D7C39698154968DC2EB7E5A1AB5 /* OCAuthMethod.swift */,
+				94A0115CAF4E1AA3A9EBE8AEB8A45FF1 /* OCPusherHost.swift */,
+				FA0B2604CD06D6639B99072E7CC4C82D /* Pusher+ObjectiveC.swift */,
+				DBB0BA7C61AEF60EF1913C30F4EA4DE5 /* PusherAuth.swift */,
+				FADBA894CC6D5DE8F2AE7352668C6EA9 /* PusherChannel.swift */,
+				141CDA8EF4CF2EA3C4D61972F6FCDE1C /* PusherChannel+EncryptionHelpers.swift */,
+				80EB4C95A211FCE0F2837C61DBC472FC /* PusherChannels.swift */,
+				7FBE78E12879A6CEBE9DC7DD36241BE6 /* PusherChannelType.swift */,
+				5CB14A01C22CC416EF2EB0108C5C58ED /* PusherClientOptions.swift */,
+				B3CC65CF4F78CBBEFA5C058A29F10173 /* PusherClientOptions+ObjectiveC.swift */,
+				DA71FCB16EF5774528A35CD837396E65 /* PusherConnection.swift */,
+				3FBF9A1E59C30E21A8CDA0EDFBD3845C /* PusherConnection+ObjectiveC.swift */,
+				9A32D1A3E519CCB3541E608C2ED9E94E /* PusherConnection+WebsocketDelegate.swift */,
+				45072E7B1E10CDC76D349E027F16EC58 /* PusherDelegate.swift */,
+				6BEBB7FEB1E7683ED0F8091F5B8A9B7A /* PusherError.swift */,
+				7B1661129A8F99C925A6A211B6F0DD32 /* PusherError+ObjectiveC.swift */,
+				032CB72268872FA627FD831CF0F11AE1 /* PusherEvent.swift */,
+				D000DEEB042E13D4DBFA169A28BAB58F /* PusherGlobalChannel.swift */,
+				88E35345AAAD48909C1216A92647202B /* PusherHost.swift */,
+				CD31CDD6B4E60497F621666A1DD6E5B7 /* PusherHost+ObjectiveC.swift */,
+				E925E66FED5739DC9C18D3663FA514C0 /* PusherPresenceChannel.swift */,
+				2ADA10E5EDEA21FC08E34F40AEF8A8BA /* PusherPresenceChannelMember.swift */,
+				9F3FC2FA452E57CC414CA9741047C2F4 /* PusherSwift.swift */,
+				F06EA6A7FCD28CEB396B9F4AB1AF6D24 /* QueuedClientEvent.swift */,
+				CF971B7406D1407C7553E97D1C49DD44 /* URL+Pusher.swift */,
+				2B1BEF83A389C774E78EF07F545A6EDC /* Support Files */,
 			);
-			path = TweetNacl;
+			path = PusherSwift;
+			sourceTree = "<group>";
+		};
+		A394D20D24F60EF0A7C1FA1BC18214DA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				656527B8C55C13E154B5A66AFD43C20A /* Accelerate.framework */,
+				E7A1D2BB5059A82D7A171E63A1D0B29C /* AVFoundation.framework */,
+				10480169508BEAA7BB9B0DB805EB72C5 /* CoreGraphics.framework */,
+				E4E5FDDC0DD6523E44DCE513653B5CE2 /* Foundation.framework */,
+				0489F23B06048A896A917572BC03E76C /* QuartzCore.framework */,
+				193630ED5D9C8656A7B5384B73DE3135 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B26E6CD57891554EF081B1BC7EE5D18F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B27D26F2B376598439B397203344EB48 /* TweetNacl.modulemap */,
+				2506796BE196362E20036E0830071538 /* TweetNacl-dummy.m */,
+				5470CACEB16459F61C00C8B649D92FAA /* TweetNacl-Info.plist */,
+				1E00FE6DE8587028CBEAAE1A467C6093 /* TweetNacl-prefix.pch */,
+				F77EC9DDEA45DF47014C4D057B0A7055 /* TweetNacl-umbrella.h */,
+				F7AAA4BAB175201867E26115E317ED94 /* TweetNacl.debug.xcconfig */,
+				7D162007E7C9C5FA0B2738A6FF2D64CC /* TweetNacl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TweetNacl";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				8D27601F93612CACC9EB2663BC8BED1E /* Pods */,
-				F5D87FAE02821F926EFDA28E789352AC /* Products */,
+				D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */,
+				DB02AEBC0091FD691E8CB94D11B0A061 /* Pods */,
+				DB33E02E3BC2C9F4607C10C17596219B /* Products */,
 				64EC178325B076CFE489E2F91650B4B9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				A394D20D24F60EF0A7C1FA1BC18214DA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0ACA400A88B2477B43FBDF34B85A963 /* Support Files */ = {
+		DB02AEBC0091FD691E8CB94D11B0A061 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4883DC5DA1CC4D22CC143AA6B5A1DD9B /* NWWebSocket.modulemap */,
-				409EAA84594A5366E8B46B91462F584B /* NWWebSocket-dummy.m */,
-				A4F8C307705B8FD0E0A441DA6AC37C5B /* NWWebSocket-Info.plist */,
-				20441A6C6A6A5F1FBEB294576CE30631 /* NWWebSocket-prefix.pch */,
-				167450499822F1F56FBB7585675D1848 /* NWWebSocket-umbrella.h */,
-				75A838891CB5A022DE1C4CE5CB714E34 /* NWWebSocket.debug.xcconfig */,
-				63B40BC2BAFF10022E05FDD245D455C4 /* NWWebSocket.release.xcconfig */,
+				22B38B508B515697FCDB8CBC029E5297 /* ASWaveformPlayerView */,
+				689F7EBB5B123C609B6E5F8FAAAB3021 /* NWWebSocket */,
+				A3679450107FF9E5578E978F2C36A374 /* PusherSwift */,
+				49501CBD290C35EB85750FBB0095A7B6 /* SCSiriWaveformView */,
+				0D931E784AA1173296E7130806046131 /* TweetNacl */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/NWWebSocket";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		F5D87FAE02821F926EFDA28E789352AC /* Products */ = {
+		DB33E02E3BC2C9F4607C10C17596219B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F460BB79C47D788CCA3AE0ACD4DC0841 /* ASWaveformPlayerView */,
 				E7192481BB5D3F04E8A606F149CD8E9D /* NWWebSocket */,
 				F1B8738E5AF68B43CE2044E35F9A9CDF /* Pods-ChatApp */,
 				0B32C323CD918E74390113D283732BDC /* PusherSwift */,
+				830DC758CE89836B130B50F4DA7A0267 /* SCSiriWaveformView */,
 				317CDB3617AE7CFBD3C9B5B901F8F543 /* TweetNacl.framework */,
 			);
 			name = Products;
@@ -432,21 +570,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5D97394BD4BDDBE0A7C1F0BDE2C25105 /* Headers */ = {
+		5B1BA9EAC3FD120B3478257021DFF49A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1AAABF138862BC68B02DD2FDF7588F8 /* ctweetnacl.h in Headers */,
-				FCF30C8255B07B8F6FDB4D7E30624D03 /* TweetNacl.h in Headers */,
-				DE021D8600B4CC70E81DEB0C3200FD4B /* TweetNacl-umbrella.h in Headers */,
+				41917C70975369593C68DBD66F1D5010 /* ASWaveformPlayerView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84CB8F2DF5F52F1B2A638BB1D2D7E895 /* Headers */ = {
+		B291275EDF1E80D9DDE0844DF5105BF8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F07D135498C989350AD22D04C69B516 /* Pods-ChatApp-umbrella.h in Headers */,
+				D21DF8C282A275E797A37A016C56E6D4 /* Pods-ChatApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,11 +594,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE5DAFD1000710AD4E548DC2FAA2AACA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F910F9909EE1A0FB09F965F98BCDE68E /* SCSiriWaveformView.h in Headers */,
+				C648851BB339BFB0C0C98CE39909F57B /* SCSiriWaveformView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0F2FF8B69D9626B54C5A80D7093F731 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C8C4488758DEE4893AFC5243C1E133BE /* PusherSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBA5E01C9EBF6E6DC8DE8D0BF5E5E87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CE365D7F32059AB74D559689889859 /* ctweetnacl.h in Headers */,
+				52A6533F4BAE549A473C4F2EF939B393 /* TweetNacl.h in Headers */,
+				DD65C402C9339F45338AFADF6AC96995 /* TweetNacl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,19 +644,21 @@
 		};
 		3E56AAC0A8B8C5BC2C6E42C547BDBFFE /* Pods-ChatApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B20FF3F67E5293BF13335B2155EAC53 /* Build configuration list for PBXNativeTarget "Pods-ChatApp" */;
+			buildConfigurationList = CF56E7720795279144FF78522820CBAE /* Build configuration list for PBXNativeTarget "Pods-ChatApp" */;
 			buildPhases = (
-				84CB8F2DF5F52F1B2A638BB1D2D7E895 /* Headers */,
-				0780353833A4EAAAC861B1DF1EE1C655 /* Sources */,
-				B6F8C0387E3FCAC54895B8D0CC265146 /* Frameworks */,
-				6821622FEF4ACEBEEB3E165BB3FC2A3A /* Resources */,
+				B291275EDF1E80D9DDE0844DF5105BF8 /* Headers */,
+				A82C534B403FECA7D1843EC4A2DEA32A /* Sources */,
+				5BBD8DA652969D29E637D6959E483DA0 /* Frameworks */,
+				7D7AA3A97B1BA0D33B117C2387B33879 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56757FE4F928794161FFF68098D3CC57 /* PBXTargetDependency */,
-				40FF6A56919B848D93CB783EE8AB4ED8 /* PBXTargetDependency */,
-				9874CFC6C41D3F9B4B86F4B6B0528161 /* PBXTargetDependency */,
+				C7E9D6CD5F7BF5A1AD5191E461D6EFD2 /* PBXTargetDependency */,
+				FC5B898DA2150E190FC3B128C3BC7D05 /* PBXTargetDependency */,
+				334C94FE87285F36D6A5B92D3EC42B3F /* PBXTargetDependency */,
+				1467E686F117B2F638B5D164245A4F0D /* PBXTargetDependency */,
+				E65E047B4F95997C11D663543EFD0275 /* PBXTargetDependency */,
 			);
 			name = "Pods-ChatApp";
 			productName = Pods_ChatApp;
@@ -520,22 +677,40 @@
 			buildRules = (
 			);
 			dependencies = (
-				6044417A9A619F61D276C006D5E85AAA /* PBXTargetDependency */,
-				29A7EE32CADE177DB604F5320CA53601 /* PBXTargetDependency */,
+				87E9FC7081719324035FBABE78CE2F1A /* PBXTargetDependency */,
+				6FD08684BED3159C3ED47300E3681140 /* PBXTargetDependency */,
 			);
 			name = PusherSwift;
 			productName = PusherSwift;
 			productReference = 0B32C323CD918E74390113D283732BDC /* PusherSwift */;
 			productType = "com.apple.product-type.framework";
 		};
+		D76BE29FE832155DDE00968858DCAB38 /* SCSiriWaveformView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F3F9574A520B79658A45B27A255BC34 /* Build configuration list for PBXNativeTarget "SCSiriWaveformView" */;
+			buildPhases = (
+				DE5DAFD1000710AD4E548DC2FAA2AACA /* Headers */,
+				66CD8D665A2512989D86EC3AA7C34F3C /* Sources */,
+				5DD7B18E47C8ADC09D51F8C3C8CAB7C1 /* Frameworks */,
+				882DDAAE97D6F33ADB378CF7BA967A1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCSiriWaveformView;
+			productName = SCSiriWaveformView;
+			productReference = 830DC758CE89836B130B50F4DA7A0267 /* SCSiriWaveformView */;
+			productType = "com.apple.product-type.framework";
+		};
 		E058628796F895302820DFBD58DCEDAC /* TweetNacl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E29772BDE576755C0FDACD2A78CC036 /* Build configuration list for PBXNativeTarget "TweetNacl" */;
+			buildConfigurationList = B5F6AB330D5EB8267D42D34A37003E7F /* Build configuration list for PBXNativeTarget "TweetNacl" */;
 			buildPhases = (
-				5D97394BD4BDDBE0A7C1F0BDE2C25105 /* Headers */,
-				3845F3ABD7564527E8BC68C5A5836F7B /* Sources */,
-				A87D48981BAB3A609A044446EF352BCF /* Frameworks */,
-				B14964070EB753322855BEDD2813FB02 /* Resources */,
+				FEBA5E01C9EBF6E6DC8DE8D0BF5E5E87 /* Headers */,
+				A7F191551EFC4502EEF6EE2F0263A0C2 /* Sources */,
+				8957DD6F23FE29962ABDF41ED40DCCC9 /* Frameworks */,
+				011B591DB30AC354977B3124439AB5B1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -544,6 +719,24 @@
 			name = TweetNacl;
 			productName = TweetNacl;
 			productReference = 317CDB3617AE7CFBD3C9B5B901F8F543 /* TweetNacl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6F6C62927F8BF152DD9F95597ED2F89 /* ASWaveformPlayerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 567B6DBCDDBD70326B91F0471E01B11F /* Build configuration list for PBXNativeTarget "ASWaveformPlayerView" */;
+			buildPhases = (
+				5B1BA9EAC3FD120B3478257021DFF49A /* Headers */,
+				61290F066A18624F506BE79457185DB3 /* Sources */,
+				C0CBB225841E04BAA5B56E861F9D95A2 /* Frameworks */,
+				1904332EFC1C721722381882345F1D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASWaveformPlayerView;
+			productName = ASWaveformPlayerView;
+			productReference = F460BB79C47D788CCA3AE0ACD4DC0841 /* ASWaveformPlayerView */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -564,20 +757,36 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F5D87FAE02821F926EFDA28E789352AC /* Products */;
+			productRefGroup = DB33E02E3BC2C9F4607C10C17596219B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F6F6C62927F8BF152DD9F95597ED2F89 /* ASWaveformPlayerView */,
 				1C8677E8CA51138111F0D17125A79694 /* NWWebSocket */,
 				3E56AAC0A8B8C5BC2C6E42C547BDBFFE /* Pods-ChatApp */,
 				4921D5B9FFDABBEE3823ABC7E8DAA736 /* PusherSwift */,
+				D76BE29FE832155DDE00968858DCAB38 /* SCSiriWaveformView */,
 				E058628796F895302820DFBD58DCEDAC /* TweetNacl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		011B591DB30AC354977B3124439AB5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12144E0D76C87F4E7255DB90B0968005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1904332EFC1C721722381882345F1D7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -591,14 +800,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6821622FEF4ACEBEEB3E165BB3FC2A3A /* Resources */ = {
+		7D7AA3A97B1BA0D33B117C2387B33879 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B14964070EB753322855BEDD2813FB02 /* Resources */ = {
+		882DDAAE97D6F33ADB378CF7BA967A1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -608,22 +817,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0780353833A4EAAAC861B1DF1EE1C655 /* Sources */ = {
+		61290F066A18624F506BE79457185DB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7695BF2327E2EDC1DAA6DCC79118D516 /* Pods-ChatApp-dummy.m in Sources */,
+				3AFA136E1691B4D35ADF447D605DB387 /* ASWaveformPlayerView.swift in Sources */,
+				7DBAA940F4855A869B17CDF18E723039 /* ASWaveformPlayerView-dummy.m in Sources */,
+				6F6A71CCC4EE3D15E133EACB102AE1C0 /* AudioAnalyser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3845F3ABD7564527E8BC68C5A5836F7B /* Sources */ = {
+		66CD8D665A2512989D86EC3AA7C34F3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D200BCAEF24B3F7CD80C2B8E43BBE0 /* Constant.swift in Sources */,
-				60FB3CC98C8D8A82FDA3EC3778E27CC2 /* ctweetnacl.c in Sources */,
-				3DE1110D6FA8C810041AC3E46CB38F55 /* TweetNacl.swift in Sources */,
-				AE18C3B8BC595BB21D556177998EC1E5 /* TweetNacl-dummy.m in Sources */,
+				9BCCB6D1A724B504D9BA846E2F8E9816 /* SCSiriWaveformView.m in Sources */,
+				1E3B81F718F36A38528FF6CDE5259B5A /* SCSiriWaveformView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F191551EFC4502EEF6EE2F0263A0C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5EED8F6DD9725A69C947DA96B7BD1C /* Constant.swift in Sources */,
+				2A9239D126171725770ED23137CC036E /* ctweetnacl.c in Sources */,
+				BA791E96C848EC4CBF138F8962F132A8 /* TweetNacl.swift in Sources */,
+				D079C5499D23C4B6103FF9D898948649 /* TweetNacl-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82C534B403FECA7D1843EC4A2DEA32A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C681335BCD26C632401869CA71B8FAF2 /* Pods-ChatApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,42 +920,92 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29A7EE32CADE177DB604F5320CA53601 /* PBXTargetDependency */ = {
+		1467E686F117B2F638B5D164245A4F0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TweetNacl;
-			target = E058628796F895302820DFBD58DCEDAC /* TweetNacl */;
-			targetProxy = 495DFA4E4EFB568C74A4121D34859421 /* PBXContainerItemProxy */;
+			name = SCSiriWaveformView;
+			target = D76BE29FE832155DDE00968858DCAB38 /* SCSiriWaveformView */;
+			targetProxy = 246B6025B2DD53F8A5C2A4C2BD7769C3 /* PBXContainerItemProxy */;
 		};
-		40FF6A56919B848D93CB783EE8AB4ED8 /* PBXTargetDependency */ = {
+		334C94FE87285F36D6A5B92D3EC42B3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PusherSwift;
 			target = 4921D5B9FFDABBEE3823ABC7E8DAA736 /* PusherSwift */;
-			targetProxy = 1A121126940B3B1ADA9F357EB7F3D17C /* PBXContainerItemProxy */;
+			targetProxy = 8B5E1232AB64491F3288DD222898E4FC /* PBXContainerItemProxy */;
 		};
-		56757FE4F928794161FFF68098D3CC57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NWWebSocket;
-			target = 1C8677E8CA51138111F0D17125A79694 /* NWWebSocket */;
-			targetProxy = DFBE2D3E22A95809E366F9693142FFC4 /* PBXContainerItemProxy */;
-		};
-		6044417A9A619F61D276C006D5E85AAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NWWebSocket;
-			target = 1C8677E8CA51138111F0D17125A79694 /* NWWebSocket */;
-			targetProxy = CC316EA48D19C4A46042AF89E32FC4EF /* PBXContainerItemProxy */;
-		};
-		9874CFC6C41D3F9B4B86F4B6B0528161 /* PBXTargetDependency */ = {
+		6FD08684BED3159C3ED47300E3681140 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TweetNacl;
 			target = E058628796F895302820DFBD58DCEDAC /* TweetNacl */;
-			targetProxy = 3300CD0D2F1076941501B603D795784F /* PBXContainerItemProxy */;
+			targetProxy = B1D5CA931233C19C91C8901A692D6435 /* PBXContainerItemProxy */;
+		};
+		87E9FC7081719324035FBABE78CE2F1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NWWebSocket;
+			target = 1C8677E8CA51138111F0D17125A79694 /* NWWebSocket */;
+			targetProxy = 84A4FC12652D929833C88D61B562C192 /* PBXContainerItemProxy */;
+		};
+		C7E9D6CD5F7BF5A1AD5191E461D6EFD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ASWaveformPlayerView;
+			target = F6F6C62927F8BF152DD9F95597ED2F89 /* ASWaveformPlayerView */;
+			targetProxy = BE373F55F5C1D5E34C1BA997D34CAED0 /* PBXContainerItemProxy */;
+		};
+		E65E047B4F95997C11D663543EFD0275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TweetNacl;
+			target = E058628796F895302820DFBD58DCEDAC /* TweetNacl */;
+			targetProxy = 54F86C766472F8C7552EB78CC01450E5 /* PBXContainerItemProxy */;
+		};
+		FC5B898DA2150E190FC3B128C3BC7D05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NWWebSocket;
+			target = 1C8677E8CA51138111F0D17125A79694 /* NWWebSocket */;
+			targetProxy = B353BEA48C63F7D9276C4281AA990CFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		16B9044C672E0362E3099B081B5D3E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699CF49FFF827420483397C564092F3D /* Pods-ChatApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		34B5ABE3C6E85ECF526EB110B683879A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8CE23DFBCD0FCC7EAD196F712876E6B /* PusherSwift.debug.xcconfig */;
+			baseConfigurationReference = 1F49AFBA8FF549AC49A7E115F1526EE4 /* PusherSwift.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -760,11 +1038,10 @@
 			};
 			name = Debug;
 		};
-		4095791EC75D6785B52705652A540399 /* Debug */ = {
+		6339E820C450B0D009E611201901376E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F495233B677AA4BB090B8C4290C85F09 /* Pods-ChatApp.debug.xcconfig */;
+			baseConfigurationReference = 1D01B63C5221CFC2FFBB8C1AEDA7A210 /* SCSiriWaveformView.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -774,30 +1051,136 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView.modulemap";
+				PRODUCT_MODULE_NAME = SCSiriWaveformView;
+				PRODUCT_NAME = SCSiriWaveformView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */ = {
+		6461B1825B49BA5BD63A2F4EC56B0750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E5AA6D306362B30E5D1B9D798DCD94 /* SCSiriWaveformView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCSiriWaveformView/SCSiriWaveformView.modulemap";
+				PRODUCT_MODULE_NAME = SCSiriWaveformView;
+				PRODUCT_NAME = SCSiriWaveformView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D822AAB06BE94FF2466926959D5048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FA64E216737B653420A78E3D11C858D /* ASWaveformPlayerView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView.modulemap";
+				PRODUCT_MODULE_NAME = ASWaveformPlayerView;
+				PRODUCT_NAME = ASWaveformPlayerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		732E7305309AA03965959F4068D40B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 773A95D71CAD27F97FD9D55CDC1FA1B4 /* ASWaveformPlayerView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ASWaveformPlayerView/ASWaveformPlayerView.modulemap";
+				PRODUCT_MODULE_NAME = ASWaveformPlayerView;
+				PRODUCT_NAME = ASWaveformPlayerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -850,7 +1233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -863,221 +1246,7 @@
 			};
 			name = Debug;
 		};
-		728CC16162805728B0CE210BDBF623F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 699CF49FFF827420483397C564092F3D /* Pods-ChatApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		993E0A7FFB5DFD0F194079A0B276E3F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9800ABFC87B09634B3DAE7758021E32D /* TweetNacl.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TweetNacl/TweetNacl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TweetNacl/TweetNacl-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TweetNacl/TweetNacl.modulemap";
-				PRODUCT_MODULE_NAME = TweetNacl;
-				PRODUCT_NAME = TweetNacl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B81132D30F724D4AC9AA578B7D3B55DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 067E32E6ED18F041D44B2D1B42B9D6D7 /* TweetNacl.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TweetNacl/TweetNacl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TweetNacl/TweetNacl-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TweetNacl/TweetNacl.modulemap";
-				PRODUCT_MODULE_NAME = TweetNacl;
-				PRODUCT_NAME = TweetNacl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B91DC8C5A13368D0AED636E4FD71001C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B40BC2BAFF10022E05FDD245D455C4 /* NWWebSocket.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NWWebSocket/NWWebSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NWWebSocket/NWWebSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/NWWebSocket/NWWebSocket.modulemap";
-				PRODUCT_MODULE_NAME = NWWebSocket;
-				PRODUCT_NAME = NWWebSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C589C3B4D16FBA4AD91CC0E824C9F7FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75A838891CB5A022DE1C4CE5CB714E34 /* NWWebSocket.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NWWebSocket/NWWebSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NWWebSocket/NWWebSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/NWWebSocket/NWWebSocket.modulemap";
-				PRODUCT_MODULE_NAME = NWWebSocket;
-				PRODUCT_NAME = NWWebSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E2AF7B0E05F57D125BC8A60087141D5F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF6409826CAB83E0E5766F3341B814C /* PusherSwift.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PusherSwift/PusherSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PusherSwift/PusherSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PusherSwift/PusherSwift.modulemap";
-				PRODUCT_MODULE_NAME = PusherSwift;
-				PRODUCT_NAME = PusherSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E873CA97BD124B21839AF13C9BE1CD18 /* Release */ = {
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1127,7 +1296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1139,23 +1308,227 @@
 			};
 			name = Release;
 		};
+		A005D2AEE1EE9A77555621A40C2FA948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F495233B677AA4BB090B8C4290C85F09 /* Pods-ChatApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChatApp/Pods-ChatApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B17CF903F659271ECE4CEC81FE3412D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7AAA4BAB175201867E26115E317ED94 /* TweetNacl.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TweetNacl/TweetNacl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TweetNacl/TweetNacl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TweetNacl/TweetNacl.modulemap";
+				PRODUCT_MODULE_NAME = TweetNacl;
+				PRODUCT_NAME = TweetNacl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B91DC8C5A13368D0AED636E4FD71001C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9EA82AA8B36C5C3E9274050FD8DDFB4 /* NWWebSocket.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NWWebSocket/NWWebSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NWWebSocket/NWWebSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NWWebSocket/NWWebSocket.modulemap";
+				PRODUCT_MODULE_NAME = NWWebSocket;
+				PRODUCT_NAME = NWWebSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C589C3B4D16FBA4AD91CC0E824C9F7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95DFFE31314970FD38E1954EF1B1F730 /* NWWebSocket.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NWWebSocket/NWWebSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NWWebSocket/NWWebSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NWWebSocket/NWWebSocket.modulemap";
+				PRODUCT_MODULE_NAME = NWWebSocket;
+				PRODUCT_NAME = NWWebSocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9C9C5BBA9DCBD7F2F5CCD5D9265D626 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D162007E7C9C5FA0B2738A6FF2D64CC /* TweetNacl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TweetNacl/TweetNacl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TweetNacl/TweetNacl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TweetNacl/TweetNacl.modulemap";
+				PRODUCT_MODULE_NAME = TweetNacl;
+				PRODUCT_NAME = TweetNacl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2AF7B0E05F57D125BC8A60087141D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBAD8813A18401636E0FD4CF3D4CAAFF /* PusherSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PusherSwift/PusherSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PusherSwift/PusherSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PusherSwift/PusherSwift.modulemap";
+				PRODUCT_MODULE_NAME = PusherSwift;
+				PRODUCT_NAME = PusherSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E29772BDE576755C0FDACD2A78CC036 /* Build configuration list for PBXNativeTarget "TweetNacl" */ = {
+		0F3F9574A520B79658A45B27A255BC34 /* Build configuration list for PBXNativeTarget "SCSiriWaveformView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B81132D30F724D4AC9AA578B7D3B55DD /* Debug */,
-				993E0A7FFB5DFD0F194079A0B276E3F6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B20FF3F67E5293BF13335B2155EAC53 /* Build configuration list for PBXNativeTarget "Pods-ChatApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4095791EC75D6785B52705652A540399 /* Debug */,
-				728CC16162805728B0CE210BDBF623F1 /* Release */,
+				6339E820C450B0D009E611201901376E /* Debug */,
+				6461B1825B49BA5BD63A2F4EC56B0750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1163,8 +1536,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */,
-				E873CA97BD124B21839AF13C9BE1CD18 /* Release */,
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		567B6DBCDDBD70326B91F0471E01B11F /* Build configuration list for PBXNativeTarget "ASWaveformPlayerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D822AAB06BE94FF2466926959D5048A /* Debug */,
+				732E7305309AA03965959F4068D40B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1183,6 +1565,24 @@
 			buildConfigurations = (
 				34B5ABE3C6E85ECF526EB110B683879A /* Debug */,
 				E2AF7B0E05F57D125BC8A60087141D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5F6AB330D5EB8267D42D34A37003E7F /* Build configuration list for PBXNativeTarget "TweetNacl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17CF903F659271ECE4CEC81FE3412D3 /* Debug */,
+				D9C9C5BBA9DCBD7F2F5CCD5D9265D626 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF56E7720795279144FF78522820CBAE /* Build configuration list for PBXNativeTarget "Pods-ChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A005D2AEE1EE9A77555621A40C2FA948 /* Debug */,
+				16B9044C672E0362E3099B081B5D3E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -52,6 +52,7 @@
 		21C852742C33D03100BCE1EE /* StatusAPICalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C852732C33D03100BCE1EE /* StatusAPICalling.swift */; };
 		21E39D652C2EAD870041F590 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E39D642C2EAD870041F590 /* SendMessage.swift */; };
 		21E39D672C2EAD940041F590 /* GetAllChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E39D662C2EAD940041F590 /* GetAllChatData.swift */; };
+		21F6E1942C40FC3A000AFEEC /* TabViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6E18E2C40FBF0000AFEEC /* TabViewViewController.swift */; };
 		21F96D482C36838C005A2343 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F96D472C36838C005A2343 /* Status.swift */; };
 		860138760DF68556A7E4E8A2 /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262F03B8D972C555B7994C3C /* Pods_ChatApp.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 317CDB3617AE7CFBD3C9B5B901F8F543;
 			remoteInfo = TweetNacl;
+		};
+		21BFAB552C451B33000ACA25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2139BCB52C2ECA5500685A68 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F460BB79C47D788CCA3AE0ACD4DC0841;
+			remoteInfo = ASWaveformPlayerView;
+		};
+		21F6E1882C40F6A1000AFEEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2139BCB52C2ECA5500685A68 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 830DC758CE89836B130B50F4DA7A0267;
+			remoteInfo = SCSiriWaveformView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -136,6 +151,7 @@
 		21C852732C33D03100BCE1EE /* StatusAPICalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAPICalling.swift; sourceTree = "<group>"; };
 		21E39D642C2EAD870041F590 /* SendMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessage.swift; sourceTree = "<group>"; };
 		21E39D662C2EAD940041F590 /* GetAllChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllChatData.swift; sourceTree = "<group>"; };
+		21F6E18E2C40FBF0000AFEEC /* TabViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewViewController.swift; sourceTree = "<group>"; };
 		21F96D472C36838C005A2343 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		262F03B8D972C555B7994C3C /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32666B2AB2491A3C7FE265D /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,9 +173,11 @@
 		2139BCB62C2ECA5500685A68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				21BFAB562C451B33000ACA25 /* ASWaveformPlayerView */,
 				2139BCBD2C2ECA5500685A68 /* NWWebSocket */,
 				2139BCBF2C2ECA5500685A68 /* Pods-ChatApp */,
 				2139BCC12C2ECA5500685A68 /* PusherSwift */,
+				21F6E1892C40F6A1000AFEEC /* SCSiriWaveformView */,
 				2139BCC32C2ECA5500685A68 /* TweetNacl.framework */,
 			);
 			name = Products;
@@ -178,6 +196,7 @@
 		21474B4E2C2D45770097D47F /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				21F6E18E2C40FBF0000AFEEC /* TabViewViewController.swift */,
 				21474B892C2D89040097D47F /* Model */,
 				21474B922C2D8A0E0097D47F /* ViewController */,
 				21F96D442C367781005A2343 /* APIManager */,
@@ -321,14 +340,22 @@
 		219948B42C3C131D008F54C7 /* TableViewcell */ = {
 			isa = PBXGroup;
 			children = (
-				21920B0A2C3E51D600BFCDE4 /* UserListTableViewCell.swift */,
-				21920B0B2C3E51D600BFCDE4 /* UserListTableViewCell.xib */,
-				21B5BE832C350B5D0097B62E /* GroupTableViewCell.swift */,
+				21BFAB572C451B9C000ACA25 /* User */,
 				217490FF2C3CF833002E1321 /* Send And Receive Audio */,
 				217490FE2C3CF822002E1321 /* Send And Receive Image */,
 				217490FD2C3CF809002E1321 /* Send And Receive Message */,
 			);
 			path = TableViewcell;
+			sourceTree = "<group>";
+		};
+		21BFAB572C451B9C000ACA25 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				21920B0A2C3E51D600BFCDE4 /* UserListTableViewCell.swift */,
+				21920B0B2C3E51D600BFCDE4 /* UserListTableViewCell.xib */,
+				21B5BE832C350B5D0097B62E /* GroupTableViewCell.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		21F96D442C367781005A2343 /* APIManager */ = {
@@ -405,6 +432,8 @@
 				Base,
 			);
 			mainGroup = 21474B432C2D45760097D47F;
+			packageReferences = (
+			);
 			productRefGroup = 21474B432C2D45760097D47F;
 			projectDirPath = "";
 			projectReferences = (
@@ -450,6 +479,22 @@
 			fileType = wrapper.framework;
 			path = TweetNacl.framework;
 			remoteRef = 2139BCC22C2ECA5500685A68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BFAB562C451B33000ACA25 /* ASWaveformPlayerView */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = ASWaveformPlayerView;
+			path = ASWaveformPlayerView.framework;
+			remoteRef = 21BFAB552C451B33000ACA25 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21F6E1892C40F6A1000AFEEC /* SCSiriWaveformView */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SCSiriWaveformView;
+			path = SCSiriWaveformView.framework;
+			remoteRef = 21F6E1882C40F6A1000AFEEC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -534,6 +579,7 @@
 				21B5BE872C35340C0097B62E /* GetGroup.swift in Sources */,
 				219948A82C3C12DE008F54C7 /* SendImageTableViewCell.swift in Sources */,
 				21474B502C2D45770097D47F /* AppDelegate.swift in Sources */,
+				21F6E1942C40FC3A000AFEEC /* TabViewViewController.swift in Sources */,
 				21C852742C33D03100BCE1EE /* StatusAPICalling.swift in Sources */,
 				21474B812C2D5CC90097D47F /* LoginVC.swift in Sources */,
 				21474B522C2D45770097D47F /* SceneDelegate.swift in Sources */,

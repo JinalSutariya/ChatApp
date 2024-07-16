@@ -41,9 +41,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 DispatchQueue.main.async {
                     print("Login successful! Token: \(loginResponse.token), User ID: \(loginResponse.data.id)")
                     UserDefaults.standard.set(loginResponse.token, forKey: "token")
+                    UserDefaults.standard.synchronize()
                     UserDefaults.standard.set(loginResponse.data.id, forKey: "userId")
                     
-                    if let tabBarVC = self?.storyboard?.instantiateViewController(withIdentifier: "tabBar") as? UITabBarController {
+                    if let tabBarVC = self?.storyboard?.instantiateViewController(withIdentifier: "tabBar") as? TabViewViewController {
                         if let secondVC = tabBarVC.viewControllers?[0] as? UserListVC {
                             secondVC.currentId = loginResponse.data.id
                         }

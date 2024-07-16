@@ -9,8 +9,8 @@ import UIKit
 import PusherSwift
 import AVFoundation
 
-class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate {
-    
+class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate, AVAudioRecorderDelegate {
+
     @IBOutlet weak var userNameLbl: UILabel!
     
     @IBOutlet weak var addMediaBtn: UIButton!
@@ -18,29 +18,33 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
     @IBOutlet weak var messageTxt: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var sentBtn: UIButton!
+    @IBOutlet weak var audioBtn: UIButton!
+    @IBOutlet weak var recorderBtn: UIButton!
     @IBOutlet weak var messageTextFieldBottomConstraint: NSLayoutConstraint!
     
     
     var name: String?
-    var status: String?
-    var receiverID: String?
-    
-    var chatMessages: [Message] = []
-    var currentPage = 1
-    var totalPages = 1
-    
-    var isLoading = false
-    
-    var pusher: Pusher!
-    var audioRecorder: AVAudioRecorder?
-    var audioPlayer: AVAudioPlayer?
-    var audioFilename: URL?
-    
-    var isPlaying = false
-    
-    var currentPlayingButton: UIButton?
-    var currentPlaybackTime: TimeInterval = 0
-    var progressUpdateTimer: Timer?
+        var status: String?
+        var receiverID: String?
+        var audioPlayer: AVAudioPlayer?
+        var progressUpdateTimer: Timer?
+        
+        var chatMessages: [Message] = []
+        var currentPage = 1
+        var totalPages = 1
+        
+        var isLoading = false
+        
+        var pusher: Pusher!
+        var audioRecorder: AVAudioRecorder?
+        var audioFilename: URL?
+        
+        var isPlaying = false
+        
+        var currentPlayingButton: UIButton?
+        var currentPlaybackTime: TimeInterval = 0
+        
     
     
     override func viewDidLoad() {
@@ -51,24 +55,30 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         tableView.register(UINib(nibName: "SendImageTableViewCell", bundle: nil), forCellReuseIdentifier: "imgSendCell")
         tableView.register(UINib(nibName: "SendAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "sendAudio")
         tableView.register(UINib(nibName: "ReceiveAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "receiveAudio")
-        
+        tableView.register(UINib(nibName: "SendRecordingTableViewCell", bundle: nil), forCellReuseIdentifier: "sendRecordingTableViewCell")
+
         
         messageTxt.delegate = self // Set the delegate for the UITextField
         messageTxt.returnKeyType = UIReturnKeyType.done
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         statusLbl.text = status
         userNameLbl.text = name
         tableView.delegate = self
         tableView.dataSource = self
+        
+       
+        sentBtn.isHidden = true
+       
         setPusher()
         setOnlineStatus()
         getAllChat()
-        
+        setupAudioSession()
+
     }
-    
+   
     @IBAction func musicTap(_ sender: Any) {
         let picker = UIDocumentPickerViewController(documentTypes: ["public.audio"], in: .import)
         picker.delegate = self
@@ -80,15 +90,104 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
     }
     
     @IBAction func sentBtn(_ sender: Any) {
-        sendMessage(message: messageTxt.text!, receiverID: receiverID!)
+        guard let messageText = messageTxt.text, !messageText.isEmpty else {
+            return
+        }
+        self.messageTxt.resignFirstResponder()
+        sendMessage(message: messageText, receiverID: receiverID!)
+        self.messageTxt.text = ""
+        recorderBtn.isHidden = false
+        addMediaBtn.isHidden = false
+        audioBtn.isHidden = false
+        sentBtn.isHidden = true
+
+        adjustTextFieldBottomConstraint(with: 0)
     }
+    @IBAction func recordingTap(_ sender: Any) {
+        if audioRecorder == nil {
+                   startRecording()
+               } else {
+                   stopRecording(success: true)
+               }
+    }
+    
+    func setupAudioSession() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker])
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to setup audio session: \(error.localizedDescription)")
+        }
+    }
+
+    func startRecording() {
+            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+            self.audioFilename = audioFilename
+
+            let settings = [
+                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+                AVSampleRateKey: 12000,
+                AVNumberOfChannelsKey: 1,
+                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ]
+
+            do {
+                audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+                audioRecorder?.delegate = self
+                audioRecorder?.record()
+            } catch {
+                stopRecording(success: false)
+            }
+        }
+
+        func stopRecording(success: Bool) {
+            audioRecorder?.stop()
+            audioRecorder = nil
+
+            guard let audioFilename = audioFilename else {
+                print("Audio filename is nil.")
+                return
+            }
+
+            if success {
+                print("Recording succeeded: \(audioFilename)")
+                sendAudio(fileURL: audioFilename, receiverID: receiverID!)
+            } else {
+                print("Recording failed.")
+            }
+        }
+
+        func playAudio() {
+            guard let fileURL = audioFilename, FileManager.default.fileExists(atPath: fileURL.path) else {
+                print("Audio file not found at path: \(String(describing: audioFilename?.path))")
+                return
+            }
+
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+                audioPlayer?.delegate = self
+                audioPlayer?.prepareToPlay()
+                audioPlayer?.play()
+            } catch {
+                print("Failed to play audio: \(error.localizedDescription)")
+            }
+        }
+
+        func getDocumentsDirectory() -> URL {
+            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            return paths[0]
+        }
     @IBAction func addMediaTap(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
-    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
@@ -100,7 +199,26 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             adjustTextFieldBottomConstraint(with: keyboardHeight)
         }
     }
-    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
+        guard let currentText = textField.text as NSString? else { return true }
+        let newText = currentText.replacingCharacters(in: range, with: string)
+        
+        // Show or hide buttons based on the new text
+        if newText.isEmpty {
+            addMediaBtn.isHidden = false
+            audioBtn.isHidden = false
+            sentBtn.isHidden = true
+            recorderBtn.isHidden = false
+        } else {
+            addMediaBtn.isHidden = true
+            audioBtn.isHidden = true
+            sentBtn.isHidden = false
+            recorderBtn.isHidden = true
+        }
+        
+        print(newText)
+        return true
+    }
     @objc func keyboardWillHide(notification: NSNotification) {
         adjustTextFieldBottomConstraint(with: 0)
     }
@@ -496,7 +614,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                     }
                     cell.backView.layer.cornerRadius = 8
                     cell.backView.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 8)
-                    
+                    cell.selectionStyle = .none
                     cell.timeLbl.text = formatTimestamp(message.createdAt)
                     
                 }
@@ -512,7 +630,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                     }
                     cell.backView.layer.cornerRadius = 8
                     cell.backView.roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 8)
-                    
+                    cell.selectionStyle = .none
                     cell.timeLbl.text = formatTimestamp(message.createdAt)
                     
                 }
@@ -528,7 +646,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                     cell.playBtn.tag = indexPath.row
                 }
                 cell.timelbl.text = formatTimestamp(message.createdAt)
-                
+                cell.selectionStyle = .none
                 cell.backView.layer.cornerRadius = 10
                 return cell
             } else {
@@ -539,10 +657,11 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                     cell.playBtn.tag = indexPath.row
                 }
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
-                
+                cell.selectionStyle = .none
                 cell.backView.layer.cornerRadius = 10
                 return cell
             }
+            
         }
         else {
             if message.senderID == Int(receiverID ?? ""){
@@ -550,6 +669,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                 cell.msgLbl.text = message.message
                 cell.userName.text = name
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
+                cell.selectionStyle = .none
                 cell.backView.roundCorners(corners: [.topRight, .bottomLeft, .bottomRight], radius: 8)
                 
                 return cell
@@ -557,6 +677,7 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
                 let cell = tableView.dequeueReusableCell(withIdentifier: "SenderCell", for: indexPath) as! SendMessageTableViewCell
                 cell.msgLbl.text = message.message
                 cell.timeLbl.text = formatTimestamp(message.createdAt)
+                cell.selectionStyle = .none
                 cell.backView.roundCorners(corners: [.topLeft, .bottomLeft, .bottomRight], radius: 8)
                 
                 return cell
@@ -565,7 +686,11 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
     }
     @objc func playAudio(_ sender: UIButton) {
         let message = chatMessages[sender.tag]
-        AudioManager.shared.playAudio(sender, with: message.message)
+        if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? SendAudioTableViewCell {
+            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+        } else if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? ReceiveAudioTableViewCell {
+            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

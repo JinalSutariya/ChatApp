@@ -7,5 +7,12 @@ target 'ChatApp' do
 
   # Pods for ChatApp
 pod 'PusherSwift'
+  pod 'SCSiriWaveformView'
+  pod 'ASWaveformPlayerView'
+
+
+
+
+
 
 end

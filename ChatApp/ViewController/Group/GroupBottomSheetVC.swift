@@ -10,7 +10,7 @@ protocol GroupCreationDelegate: AnyObject {
     func didCreateGroup()
 }
 class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
-
+    
     
     @IBOutlet weak var bottomView: UIView!
     
@@ -19,7 +19,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var createBtn: UIButton!
     var users: [User] = []
     weak var delegate: GroupCreationDelegate?
-
+    
     var selectedUsers: Set<IndexPath> = []
     
     let grabberView = UIView()
@@ -27,17 +27,16 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         createBtn.layer.cornerRadius = 15
-        
         tableView.delegate = self
         tableView.dataSource = self
         setOnlineStatus()
         tableView.reloadData()
         fetchUsers()
-
+        
         
     }
     
-   
+    
     @IBAction func backTap(_ sender: Any) {
         
         dismiss(animated: true)
@@ -132,11 +131,11 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
             }
         }.resume()
     }
-
-
+    
+    
     
     func fetchUsers() {
-                GetAuthService.shared.getUserProfile { result in
+        GetAuthService.shared.getUserProfile { result in
             switch result {
             case .success(let userResponse):
                 guard let userId = UserDefaults.standard.string(forKey: "userId"), let currentId = Int(userId) else {
@@ -144,7 +143,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
                     return
                 }
                 self.users = userResponse.data.filter { $0.id != currentId }
-
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -153,7 +152,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
@@ -166,7 +165,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         cell.selectBtn.tag = indexPath.row
         cell.selectBtn.addTarget(self, action: #selector(selectButtonTapped(_:)), for: .touchUpInside)
         cell.statusLbl.text = formatLastSeenDate(dateString: user.createdAt)
-
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

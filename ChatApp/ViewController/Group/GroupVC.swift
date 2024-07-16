@@ -32,7 +32,7 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Gro
         let infoViewController = storyboard?.instantiateViewController(identifier: "groupBottomSheetVC") as? GroupBottomSheetVC
                 infoViewController!.modalPresentationStyle = .overCurrentContext
                 infoViewController!.modalTransitionStyle = .crossDissolve
-                infoViewController!.delegate = self  // Set the delegate
+                infoViewController!.delegate = self  
                 present(infoViewController!, animated: true)
         
     }

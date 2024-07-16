@@ -33,6 +33,7 @@ class SignUpVC: UIViewController {
                 DispatchQueue.main.async {
                     print("Sign up successful! Token: \(signUpResponse.token), User ID: \(signUpResponse.data.id)")
                     UserDefaults.standard.set(signUpResponse.token, forKey: "token")
+                    UserDefaults.standard.synchronize()
                     UserDefaults.standard.set(signUpResponse.data.id, forKey: "userId")
                     
                     if let userListVC = self?.storyboard?.instantiateViewController(withIdentifier: "userListVC") as? UserListVC {

@@ -11,15 +11,17 @@ class GroupDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var groupName: UILabel!
     var groupID: Int?
     var groupData: GroupData?
     var currentUserID: Int?
+    var groupNameText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         currentUserID = UserDefaults.standard.integer(forKey: "userId")
         
-        
+        groupName.text = groupNameText
         tableView.delegate = self
         tableView.dataSource = self
         fetchGroupDetail(groupId: groupID!)
