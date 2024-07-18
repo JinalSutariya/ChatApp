@@ -42,29 +42,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMI-8U-Dr5">
                                 <rect key="frame" x="20" y="38" width="195.33333333333334" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bTq-Ic-FbF">
-                                        <rect key="frame" x="5" y="8" width="180.33333333333334" height="34"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-62-W3x">
-                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="9CS-9g-0iI"/>
-                                                    <constraint firstAttribute="width" constant="34" id="e5m-F3-i7r"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
-                                            </button>
-                                            <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-bg-pSk">
-                                                <rect key="frame" x="44" y="15" width="136.33333333333334" height="4"/>
-                                            </progressView>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-62-W3x">
+                                        <rect key="frame" x="10" y="8" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9CS-9g-0iI"/>
+                                            <constraint firstAttribute="width" constant="34" id="e5m-F3-i7r"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-Mm-Y0T" customClass="WaveformProgressView" customModule="ChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="8" width="135.33333333333334" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8960405307" green="0.89649132220000005" blue="0.92410518100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="bTq-Ic-FbF" secondAttribute="trailing" constant="10" id="5DA-7h-R4k"/>
-                                    <constraint firstItem="bTq-Ic-FbF" firstAttribute="centerY" secondItem="qMI-8U-Dr5" secondAttribute="centerY" id="NqG-EO-2mY"/>
-                                    <constraint firstItem="bTq-Ic-FbF" firstAttribute="leading" secondItem="qMI-8U-Dr5" secondAttribute="leading" constant="5" id="vYD-eZ-W0W"/>
+                                    <constraint firstItem="hdb-Mm-Y0T" firstAttribute="centerY" secondItem="qMI-8U-Dr5" secondAttribute="centerY" id="3Nz-iC-eKO"/>
+                                    <constraint firstAttribute="trailing" secondItem="hdb-Mm-Y0T" secondAttribute="trailing" constant="10" id="A2o-Bk-QfZ"/>
+                                    <constraint firstItem="CKK-62-W3x" firstAttribute="centerY" secondItem="qMI-8U-Dr5" secondAttribute="centerY" id="hKV-eC-ydr"/>
+                                    <constraint firstItem="CKK-62-W3x" firstAttribute="leading" secondItem="qMI-8U-Dr5" secondAttribute="leading" constant="10" id="i7K-O7-EqI"/>
+                                    <constraint firstItem="hdb-Mm-Y0T" firstAttribute="leading" secondItem="CKK-62-W3x" secondAttribute="trailing" constant="6" id="jDg-Gp-1YN"/>
+                                    <constraint firstItem="hdb-Mm-Y0T" firstAttribute="height" secondItem="qMI-8U-Dr5" secondAttribute="height" multiplier="0.68" id="sE3-5v-KcQ"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBf-hb-X7Z">
@@ -99,9 +98,9 @@
             <connections>
                 <outlet property="backView" destination="qMI-8U-Dr5" id="Sk6-Nu-12H"/>
                 <outlet property="playBtn" destination="CKK-62-W3x" id="gQN-bi-XBz"/>
-                <outlet property="progressView" destination="o5t-bg-pSk" id="DlT-il-Cf3"/>
                 <outlet property="timelbl" destination="aBf-hb-X7Z" id="HQO-7F-XEH"/>
                 <outlet property="userName" destination="aIl-da-Ug0" id="37f-KJ-cT6"/>
+                <outlet property="waveProgressView" destination="hdb-Mm-Y0T" id="QcM-Cv-pH9"/>
             </connections>
             <point key="canvasLocation" x="-21.374045801526716" y="14.43661971830986"/>
         </tableViewCell>

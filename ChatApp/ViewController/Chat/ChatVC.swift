@@ -687,9 +687,9 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelega
     @objc func playAudio(_ sender: UIButton) {
         let message = chatMessages[sender.tag]
         if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? SendAudioTableViewCell {
-            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+            AudioManager.shared.playAudio(sender, with: message.message, waveformProgressView: cell.WaveProgressView)
         } else if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? ReceiveAudioTableViewCell {
-            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+            AudioManager.shared.playAudio(sender, with: message.message, waveformProgressView: cell.waveProgressView)
         }
     }
     

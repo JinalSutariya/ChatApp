@@ -23,29 +23,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOl-jv-WUj">
                                 <rect key="frame" x="104.66666666666667" y="10" width="195.33333333333331" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d1b-9c-AlH">
-                                        <rect key="frame" x="5" y="8" width="180.33333333333334" height="34"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmv-wL-JzZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="34" id="AiJ-Et-Qam"/>
-                                                    <constraint firstAttribute="height" constant="34" id="Na4-0X-0nF"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
-                                            </button>
-                                            <progressView opaque="NO" contentMode="center" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-N4-cN3">
-                                                <rect key="frame" x="38.999999999999986" y="15" width="141.33333333333331" height="4"/>
-                                            </progressView>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmv-wL-JzZ">
+                                        <rect key="frame" x="10" y="8" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="AiJ-Et-Qam"/>
+                                            <constraint firstAttribute="height" constant="34" id="Na4-0X-0nF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdx-5B-adc" customClass="WaveformProgressView" customModule="ChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="51.999999999999986" y="8" width="133.33333333333331" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.86733986829999998" green="0.86777622070000004" blue="0.89450559259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.86952518759999997" green="0.9160272653" blue="0.99814826249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="d1b-9c-AlH" firstAttribute="centerY" secondItem="VOl-jv-WUj" secondAttribute="centerY" id="1ya-zR-KCJ"/>
-                                    <constraint firstItem="d1b-9c-AlH" firstAttribute="leading" secondItem="VOl-jv-WUj" secondAttribute="leading" constant="5" id="Tqw-oy-7Uw"/>
-                                    <constraint firstAttribute="trailing" secondItem="d1b-9c-AlH" secondAttribute="trailing" constant="10" id="ixx-US-y5e"/>
+                                    <constraint firstItem="fdx-5B-adc" firstAttribute="centerY" secondItem="VOl-jv-WUj" secondAttribute="centerY" id="9a7-2d-goK"/>
+                                    <constraint firstItem="fdx-5B-adc" firstAttribute="height" secondItem="VOl-jv-WUj" secondAttribute="height" multiplier="0.68" id="OQA-9A-oYb"/>
+                                    <constraint firstItem="kmv-wL-JzZ" firstAttribute="centerY" secondItem="VOl-jv-WUj" secondAttribute="centerY" id="aZ5-pK-6gO"/>
+                                    <constraint firstAttribute="trailing" secondItem="fdx-5B-adc" secondAttribute="trailing" constant="10" id="eqh-37-pAX"/>
+                                    <constraint firstItem="kmv-wL-JzZ" firstAttribute="leading" secondItem="VOl-jv-WUj" secondAttribute="leading" constant="10" id="nbV-CZ-G4F"/>
+                                    <constraint firstItem="fdx-5B-adc" firstAttribute="leading" secondItem="kmv-wL-JzZ" secondAttribute="trailing" constant="8" symbolic="YES" id="t3S-sF-60y"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkB-wI-JYI">
@@ -76,9 +75,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="WaveProgressView" destination="fdx-5B-adc" id="pyt-6z-tCn"/>
                 <outlet property="backView" destination="VOl-jv-WUj" id="UAW-f0-dsq"/>
                 <outlet property="playBtn" destination="kmv-wL-JzZ" id="L27-rX-hhj"/>
-                <outlet property="progressView" destination="hfd-N4-cN3" id="SS8-SP-N2z"/>
                 <outlet property="timeLbl" destination="dkB-wI-JYI" id="rG6-Po-1mY"/>
             </connections>
             <point key="canvasLocation" x="10.687022900763358" y="2.1126760563380285"/>

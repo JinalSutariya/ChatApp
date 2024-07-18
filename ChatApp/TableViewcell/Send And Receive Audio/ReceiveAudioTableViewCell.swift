@@ -9,7 +9,7 @@ import UIKit
 
 class ReceiveAudioTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var waveProgressView: WaveformProgressView!
     @IBOutlet weak var timelbl: UILabel!
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var userName: UILabel!

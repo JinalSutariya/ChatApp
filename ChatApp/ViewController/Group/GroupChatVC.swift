@@ -603,7 +603,6 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                 cell.backView.layer.cornerRadius = 10
                 cell.selectionStyle = .none
                 
-                cell.progressView.setProgress(0, animated: false) // Reset progress view
                 return cell
             } else {
                 // Configure SendAudioTableViewCell
@@ -617,7 +616,6 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
                 cell.backView.layer.cornerRadius = 10
                 cell.selectionStyle = .none
                 
-                cell.progressView.setProgress(0, animated: false) // Reset progress view
                 return cell
             }
         }
@@ -644,12 +642,13 @@ extension GroupChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewD
     }
     
     
+    
     @objc func playAudio(_ sender: UIButton) {
         let message = groupMessages[sender.tag]
         if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? SendAudioTableViewCell {
-            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+            AudioManager.shared.playAudio(sender, with: message.message, waveformProgressView: cell.WaveProgressView)
         } else if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? ReceiveAudioTableViewCell {
-            AudioManager.shared.playAudio(sender, with: message.message, progressView: cell.progressView)
+            AudioManager.shared.playAudio(sender, with: message.message, waveformProgressView: cell.waveProgressView)
         }
     }
     

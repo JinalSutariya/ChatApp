@@ -9,7 +9,7 @@ import UIKit
 
 class SendAudioTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var WaveProgressView: WaveformProgressView!
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var playBtn: UIButton!
     override func awakeFromNib() {
