@@ -6,23 +6,28 @@
 //
 
 import UIKit
+
 protocol GroupCreationDelegate: AnyObject {
     func didCreateGroup()
 }
+
 class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     
+    // MARK: - OUTLET
     
     @IBOutlet weak var bottomView: UIView!
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var createBtn: UIButton!
+    
+    // MARK: - PROPERTY
+    
     var users: [User] = []
     weak var delegate: GroupCreationDelegate?
-    
     var selectedUsers: Set<IndexPath> = []
-    
     let grabberView = UIView()
+    
+    // MARK: - LIFE CYCLE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,9 +38,9 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
         fetchUsers()
         
-        
     }
     
+    // MARK: - BUTTON CLICK
     
     @IBAction func backTap(_ sender: Any) {
         
@@ -46,31 +51,8 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         showGroupNameAlert()
         
     }
-    func showGroupNameAlert() {
-        let alertController = UIAlertController(title: "Create Group", message: "Enter group name", preferredStyle: .alert)
-        
-        alertController.addTextField { textField in
-            textField.placeholder = "Group Name"
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let createAction = UIAlertAction(title: "Create", style: .default) { [weak self] _ in
-            guard let self = self,
-                  let groupName = alertController.textFields?.first?.text,
-                  !groupName.isEmpty else { return }
-            
-            // Extract selected user IDs
-            let selectedUserIDs = self.selectedUsers.map { self.users[$0.row].id }
-            
-            self.createGroup(groupName: groupName, memberIDs: selectedUserIDs)
-            
-        }
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(createAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
+    
+    // MARK: - API CALL FOR CREATE GROUP
     
     func createGroup(groupName: String, memberIDs: [Int]) {
         guard let url = URL(string: "https://fullchatapp.brijeshnavadiya.com/api/create/group") else {
@@ -132,7 +114,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         }.resume()
     }
     
-    
+    // MARK: - API CALL FOR FETCH USER
     
     func fetchUsers() {
         GetAuthService.shared.getUserProfile { result in
@@ -153,6 +135,36 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // MARK: - ALL CUSTOM FUNCTION
+    
+    func showGroupNameAlert() {
+        let alertController = UIAlertController(title: "Create Group", message: "Enter group name", preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Group Name"
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let createAction = UIAlertAction(title: "Create", style: .default) { [weak self] _ in
+            guard let self = self,
+                  let groupName = alertController.textFields?.first?.text,
+                  !groupName.isEmpty else { return }
+            
+            // Extract selected user IDs
+            let selectedUserIDs = self.selectedUsers.map { self.users[$0.row].id }
+            
+            self.createGroup(groupName: groupName, memberIDs: selectedUserIDs)
+            
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(createAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - TABLEVIEW DELEGATE
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
@@ -168,6 +180,7 @@ class GroupBottomSheetVC: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if selectedUsers.contains(indexPath) {
             selectedUsers.remove(indexPath)

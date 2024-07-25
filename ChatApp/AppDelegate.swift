@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         setOfflineStatus()
-    } 
+    }
     
     // MARK: UISceneSession Lifecycle
     

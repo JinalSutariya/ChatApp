@@ -10,45 +10,47 @@ import PusherSwift
 import AVFoundation
 
 class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioPlayerDelegate, UITextFieldDelegate, AVAudioRecorderDelegate {
-
-    @IBOutlet weak var userNameLbl: UILabel!
     
+    // MARK: - OUTLET
+    
+    @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var addMediaBtn: UIButton!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var messageTxt: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var sentBtn: UIButton!
     @IBOutlet weak var audioBtn: UIButton!
     @IBOutlet weak var recorderBtn: UIButton!
     @IBOutlet weak var messageTextFieldBottomConstraint: NSLayoutConstraint!
     
+    // MARK: - PROPERTY
     
     var name: String?
-        var status: String?
-        var receiverID: String?
-        var audioPlayer: AVAudioPlayer?
-        var progressUpdateTimer: Timer?
-        
-        var chatMessages: [Message] = []
-        var currentPage = 1
-        var totalPages = 1
-        
-        var isLoading = false
-        
-        var pusher: Pusher!
-        var audioRecorder: AVAudioRecorder?
-        var audioFilename: URL?
-        
-        var isPlaying = false
-        
-        var currentPlayingButton: UIButton?
-        var currentPlaybackTime: TimeInterval = 0
-        
+    var status: String?
+    var receiverID: String?
     
+    var chatMessages: [Message] = []
+    var pusher: Pusher!
+    
+    var currentPage = 1
+    var totalPages = 1
+    
+    var isLoading = false
+    var isPlaying = false
+    
+    var audioRecorder: AVAudioRecorder?
+    var audioFilename: URL?
+    var audioPlayer: AVAudioPlayer?
+    var progressUpdateTimer: Timer?
+    
+    var currentPlayingButton: UIButton?
+    var currentPlaybackTime: TimeInterval = 0
+    
+    // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.register(UINib(nibName: "SendMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "SenderCell")
         tableView.register(UINib(nibName: "ReceiveMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "ReceiverCell")
         tableView.register(UINib(nibName: "ReceiveImageTableViewCell", bundle: nil), forCellReuseIdentifier: "imgReceiveCell")
@@ -56,7 +58,6 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         tableView.register(UINib(nibName: "SendAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "sendAudio")
         tableView.register(UINib(nibName: "ReceiveAudioTableViewCell", bundle: nil), forCellReuseIdentifier: "receiveAudio")
         tableView.register(UINib(nibName: "SendRecordingTableViewCell", bundle: nil), forCellReuseIdentifier: "sendRecordingTableViewCell")
-
         
         messageTxt.delegate = self // Set the delegate for the UITextField
         messageTxt.returnKeyType = UIReturnKeyType.done
@@ -69,16 +70,21 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         tableView.delegate = self
         tableView.dataSource = self
         
-       
         sentBtn.isHidden = true
-       
+        
         setPusher()
         setOnlineStatus()
         getAllChat()
         setupAudioSession()
-
     }
-   
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: - BUTTON CLICK
+    
     @IBAction func musicTap(_ sender: Any) {
         let picker = UIDocumentPickerViewController(documentTypes: ["public.audio"], in: .import)
         picker.delegate = self
@@ -100,15 +106,30 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         addMediaBtn.isHidden = false
         audioBtn.isHidden = false
         sentBtn.isHidden = true
-
+        
         adjustTextFieldBottomConstraint(with: 0)
     }
     @IBAction func recordingTap(_ sender: Any) {
         if audioRecorder == nil {
-                   startRecording()
-               } else {
-                   stopRecording(success: true)
-               }
+            startRecording()
+        } else {
+            stopRecording(success: true)
+        }
+    }
+    
+    @IBAction func addMediaTap(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // MARK: - ALL CUSTOM FUNCTION
+    
+    func scrollToBottom() {
+        guard chatMessages.count > 0 else { return }
+        let indexPath = IndexPath(row: chatMessages.count - 1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     func setupAudioSession() {
@@ -120,85 +141,80 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             print("Failed to setup audio session: \(error.localizedDescription)")
         }
     }
-
+    
     func startRecording() {
-            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-            self.audioFilename = audioFilename
-
-            let settings = [
-                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                AVSampleRateKey: 12000,
-                AVNumberOfChannelsKey: 1,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-            ]
-
-            do {
-                audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
-                audioRecorder?.delegate = self
-                audioRecorder?.record()
-            } catch {
-                stopRecording(success: false)
-            }
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        self.audioFilename = audioFilename
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder?.delegate = self
+            audioRecorder?.record()
+        } catch {
+            stopRecording(success: false)
         }
-
-        func stopRecording(success: Bool) {
-            audioRecorder?.stop()
-            audioRecorder = nil
-
-            guard let audioFilename = audioFilename else {
-                print("Audio filename is nil.")
-                return
-            }
-
-            if success {
-                print("Recording succeeded: \(audioFilename)")
-                sendAudio(fileURL: audioFilename, receiverID: receiverID!)
-            } else {
-                print("Recording failed.")
-            }
-        }
-
-        func playAudio() {
-            guard let fileURL = audioFilename, FileManager.default.fileExists(atPath: fileURL.path) else {
-                print("Audio file not found at path: \(String(describing: audioFilename?.path))")
-                return
-            }
-
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
-                audioPlayer?.delegate = self
-                audioPlayer?.prepareToPlay()
-                audioPlayer?.play()
-            } catch {
-                print("Failed to play audio: \(error.localizedDescription)")
-            }
-        }
-
-        func getDocumentsDirectory() -> URL {
-            let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            return paths[0]
-        }
-    @IBAction func addMediaTap(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
     }
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    
+    func stopRecording(success: Bool) {
+        audioRecorder?.stop()
+        audioRecorder = nil
+        
+        guard let audioFilename = audioFilename else {
+            print("Audio filename is nil.")
+            return
+        }
+        
+        if success {
+            print("Recording succeeded: \(audioFilename)")
+            sendAudio(fileURL: audioFilename, receiverID: receiverID!)
+        } else {
+            print("Recording failed.")
+        }
     }
+    
+    func playAudio() {
+        guard let fileURL = audioFilename, FileManager.default.fileExists(atPath: fileURL.path) else {
+            print("Audio file not found at path: \(String(describing: audioFilename?.path))")
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+            audioPlayer?.delegate = self
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch {
+            print("Failed to play audio: \(error.localizedDescription)")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    // MARK: - TEXTFIELD DELEGATE
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
         return true
     }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardSize.height
             adjustTextFieldBottomConstraint(with: keyboardHeight)
         }
     }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool{
         guard let currentText = textField.text as NSString? else { return true }
         let newText = currentText.replacingCharacters(in: range, with: string)
@@ -219,6 +235,7 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         print(newText)
         return true
     }
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         adjustTextFieldBottomConstraint(with: 0)
     }
@@ -229,6 +246,9 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             self.view.layoutIfNeeded()
         }
     }
+    
+    // MARK: - SET PUSHER
+    
     func setPusher() {
         guard let userId = UserDefaults.standard.string(forKey: "userId") else {
             print("User ID not found in UserDefaults.")
@@ -311,6 +331,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         pusher.connect()
     }
     
+    // MARK: - API CALL FOR GETALLCHAT
+    
     func getAllChat() {
         guard !isLoading else { return }
         
@@ -343,6 +365,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             }
         }
     }
+    
+    // MARK: - API CALL FOR SEND MESSAGE
     
     func sendMessage(message: String, receiverID: String) {
         
@@ -414,6 +438,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         }.resume()
     }
     
+    // MARK: - API CALL FOR SEND IMAGE
+    
     func sendImage(imageData: Data, receiverID: String) {
         let urlString = "https://fullchatapp.brijeshnavadiya.com/api/send/message"
         guard let url = URL(string: urlString) else { return }
@@ -483,6 +509,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             }
         }.resume()
     }
+    
+    // MARK: - API CALL FOR SEND AUDIO
     
     func sendAudio(fileURL: URL, receiverID: String) {
         let parameters = [
@@ -576,6 +604,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
         }.resume()
     }
     
+    // MARK: - IMAGE PICKER
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
@@ -584,14 +614,8 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
             sendImage(imageData: imageData, receiverID: receiverID!)
         }
     }
-    
-    func scrollToBottom() {
-        guard chatMessages.count > 0 else { return }
-        let indexPath = IndexPath(row: chatMessages.count - 1, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-    }
-    
 }
+// MARK: - TABLEVIEW DELEGATE
 
 extension ChatVC: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,23 +9,27 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
-    @IBOutlet weak var signUpBtn: UIButton!
+    // MARK: - OUTLET
     
+    @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var pwdTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var userNameTxt: UITextField!
     
+    // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpBtn.layer.cornerRadius = signUpBtn.frame.size.height/2
     }
     
+    // MARK: - BUTTON CLICK
     
     @IBAction func signUpTap(_ sender: Any) {
         guard let name = userNameTxt.text, let email = emailTxt.text, let password = pwdTxt.text else {
             return
         }
+        // MARK: - API CALL FOR SIGNUP
         
         PostAuthService.shared.signup(name: name, email: email, password: password) { [weak self] result in
             switch result {
