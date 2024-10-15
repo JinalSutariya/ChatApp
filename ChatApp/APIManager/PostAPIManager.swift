@@ -21,7 +21,14 @@ class PostAuthService {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        } else {
+            print("No token found")
+            return
+        }
         
         let headerToken = getUSERTOKEN()
         request.addValue(headerToken, forHTTPHeaderField: "Authorization")
@@ -69,6 +76,10 @@ class PostAuthService {
         }.resume()
     }
     
+    
+    
+    
+    
     func login(email: String, password: String, completion: @escaping (Result<Login, Error>) -> Void) {
         let requestBody: [String: Any] = ["email": email, "password": password]
         PostRequest(endpoint: "api/login/user", requestBody: requestBody, responseType: Login.self, completion: completion)
@@ -83,6 +94,10 @@ class PostAuthService {
         let requestBody: [String: Any] = ["receiveruser_id": receiverID, "message": message, "type": "text"]
         PostRequest(endpoint: "api/send/message", requestBody: requestBody, responseType: SendMessageResponse.self, completion: completion)
     }
+    
+  
+
+    
     func createGroup(groupName: String, memberIDs: [Int], completion: @escaping (Result<CreateGroup, Error>) -> Void) {
         let requestBody: [String: Any] = [
             "group_name": groupName,
@@ -90,7 +105,6 @@ class PostAuthService {
         ]
         PostRequest(endpoint: "api/create/group", requestBody: requestBody, responseType: CreateGroup.self, completion: completion)
     }
-    
     
     func groupSendMessage(message: String, groupId: Int, completion: @escaping (Result<GroupSendMessageResponse, Error>) -> Void) {
         let requestBody: [String: Any] = ["group_id": groupId, "message": message, "type": "text"]

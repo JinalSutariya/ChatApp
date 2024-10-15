@@ -370,42 +370,12 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
     
     func sendMessage(message: String, receiverID: String) {
         
-        guard let sendMessage = messageTxt.text, !sendMessage.isEmpty else { return }
         
-        let urlString = "\(Constant.API.BASE_URL)api/send/message"
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        if let token = UserDefaults.standard.string(forKey: "token") {
-            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        } else {
-            print("No token found")
-            return
-        }
-        
-        let messageRequest: [String: Any] = ["receiveruser_id": receiverID, "message": sendMessage, "type": "text"]
-        
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: messageRequest, options: .prettyPrinted)
-        } catch {
-            print("Error creating JSON data: \(error.localizedDescription)")
-            return
-        }
-        
-        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            guard let data = data, error == nil else {
-                print("Error: \(error?.localizedDescription ?? "Unknown error")")
-                return
-            }
-            
-            do {
-                let sendMessageResponse = try JSONDecoder().decode(SendMessageResponse.self, from: data)
+        PostAuthService.shared.sendMessage(message: message, receiverID: receiverID) { result in
+            switch result {
+            case .success(let sendMessageResponse):
+                print("Chat messages fetched successfully")
+                
                 DispatchQueue.main.async {
                     if sendMessageResponse.success == "true" {
                         // Handle successful message sending
@@ -421,21 +391,86 @@ class ChatVC: UIViewController, PusherDelegate, UIImagePickerControllerDelegate,
                             createdAt: sendMessageResponse.data.createdAt,
                             updatedAt: sendMessageResponse.data.updatedAt
                         )
-                        self?.chatMessages.append(newMessage)
-                        self?.tableView.reloadData()
-                        self?.scrollToBottom()
+                        self.chatMessages.append(newMessage)
+                        self.tableView.reloadData()
+                        self.scrollToBottom()
                     } else {
                         // Handle failure
                         print("Failed to send message: \(sendMessageResponse.message)")
                     }
                 }
-            } catch {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    // print("Failed to decode JSON. Raw JSON: \(jsonString)")
-                }
-                print("Failed to decode JSON: \(error.localizedDescription)")
+                
+            case .failure(let error):
+                print("Failed to fetch chat messages:", error)
             }
-        }.resume()
+        }
+        
+        /*    guard let sendMessage = messageTxt.text, !sendMessage.isEmpty else { return }
+         
+         let urlString = "\(Constant.API.BASE_URL)api/send/message"
+         guard let url = URL(string: urlString) else {
+         print("Invalid URL")
+         return
+         }
+         
+         var request = URLRequest(url: url)
+         request.httpMethod = "POST"
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         
+         if let token = UserDefaults.standard.string(forKey: "token") {
+         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+         } else {
+         print("No token found")
+         return
+         }
+         
+         let messageRequest: [String: Any] = ["receiveruser_id": receiverID, "message": sendMessage, "type": "text"]
+         
+         do {
+         request.httpBody = try JSONSerialization.data(withJSONObject: messageRequest, options: .prettyPrinted)
+         } catch {
+         print("Error creating JSON data: \(error.localizedDescription)")
+         return
+         }
+         
+         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+         guard let data = data, error == nil else {
+         print("Error: \(error?.localizedDescription ?? "Unknown error")")
+         return
+         }
+         
+         do {
+         let sendMessageResponse = try JSONDecoder().decode(SendMessageResponse.self, from: data)
+         DispatchQueue.main.async {
+         if sendMessageResponse.success == "true" {
+         // Handle successful message sending
+         print("Message sent: \(sendMessageResponse.data.message)")
+         // Append the new message to your chat messages array
+         let newMessage = Message(
+         id: sendMessageResponse.data.id,
+         converID: sendMessageResponse.data.converID,
+         senderID: sendMessageResponse.data.senderID,
+         receiverID: sendMessageResponse.data.receiverID,
+         message: sendMessageResponse.data.message,
+         type: sendMessageResponse.data.type,
+         createdAt: sendMessageResponse.data.createdAt,
+         updatedAt: sendMessageResponse.data.updatedAt
+         )
+         self?.chatMessages.append(newMessage)
+         self?.tableView.reloadData()
+         self?.scrollToBottom()
+         } else {
+         // Handle failure
+         print("Failed to send message: \(sendMessageResponse.message)")
+         }
+         }
+         } catch {
+         if let jsonString = String(data: data, encoding: .utf8) {
+         // print("Failed to decode JSON. Raw JSON: \(jsonString)")
+         }
+         print("Failed to decode JSON: \(error.localizedDescription)")
+         }
+         }.resume()*/
     }
     
     // MARK: - API CALL FOR SEND IMAGE
